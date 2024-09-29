@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Name: *Tran Viet Cuong*
+* ID: *Ba12-035*
+* Group ID: *5*
+* Project Name: *Social Media Dashboard*
