@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *Doan Duc Hoang*
-* ID: *BA12-078*
+* Name: *Nguyen Quoc Viet*
+* ID: *BA12-192*
 * Group ID: *5*
 * Project Name: *Social Media Dashboard*
