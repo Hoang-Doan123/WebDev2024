@@ -1,8 +1,11 @@
+/* Phần header */
 .heading_container {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 10px; 
+    padding: 15px 30px; /* Thêm khoảng cách padding */
+    /* background-color: #f8f9fa; */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
 }
 
 .home_btn, .setting_btn {
@@ -11,46 +14,62 @@
     cursor: pointer;
 }
 
-.dashboard_title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    /* align-self: flex-start;  */
-    /* margin-top: 20px; */
+.home_btn img, .setting_btn img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
 }
 
+.home_btn:hover img, .setting_btn:hover img {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+/* Tiêu đề chính của dashboard */
+.dashboard_title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 60px;
+    letter-spacing: 1px;
+    cursor: context-menu;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container cho các thẻ cards */
 .cards_container {
-    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi hết chỗ */
+    justify-content: center; /* Căn đều các phần tử theo chiều ngang */
+    margin-top: 40px;
 }
-.facebook_card {
-    border: 1px solid red;
+
+/* Định dạng chung cho tất cả các thẻ card */
+button {
+    border: 1px solid #cccccc;
     border-radius: 15px;
-    padding-left: 50px;
-    padding-right: 150px; /* 600 */
-    padding-bottom: 150px;
+    width: 300px;
+    height: 150px;
+    margin: 50px; /* Tạo khoảng cách giữa các thẻ */
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow, background-color 0.2s ease-in-out; /* Tạo hiệu ứng mượt khi hover */
 }
-.instagram_card {
-    border: 1px solid red;
-    border-radius: 15px;
-    padding-left: 50px;
-    padding-right: 200px;
-    padding-top: 15px;
-    padding-bottom: 50px;
+
+button:hover {
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn khi hover */
+    background-color: #f2f2f2;
 }
-.instagram_img {
-    margin-bottom: 10px;
-}
-.youtube_card {
-    border: 1px solid red;
-    border-radius: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-}
+
+/* Đảm bảo mọi thẻ có cùng kích thước và kiểu */
+.facebook_card,
+.instagram_card,
+.youtube_card,
 .twitter_card {
-    border: 1px solid red;
-    border-radius: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* color: black; */
+    text-align: center;
 }
