@@ -7,6 +7,7 @@
     <link rel="icon" href="Images/Media/CircleLogo.png">
     <link rel="stylesheet" href="css/twitter.css" type="text/css">
     <script defer src="js/twitter.js"></script>
+    <script defer src="js/twitter_2.js"></script>
 </head>
 <body>
     <div class="navigation-bar-container">
@@ -20,6 +21,7 @@
             <img src="Images/setting_icon.png" height="30px">
         </div>
     </div>
+    <hr />
     <div class="twitter-analysis-container">
         <!-- The fragment which contains the table which shows the overall analysis -->
         <div class="interaction-analytics">
@@ -39,7 +41,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>10,234</h1>
+                            <h1>420,2K</h1>
                         </div>
                         <div class="change">
                             <h5>3%</h5>
@@ -59,7 +61,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>1,119</h1>
+                            <h1>103,3K</h1>
                         </div>
                         <div class="change">
                             <h5>6%</h5>
@@ -79,7 +81,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>456</h1>
+                            <h1>68,2K</h1>
                         </div>
                         <div class="change">
                             <h5>2%</h5>
@@ -99,7 +101,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>345,123</h1>
+                            <h1>145,24M</h1>
                         </div>
                         <div class="change">
                             <h5>7%</h5>
@@ -119,7 +121,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>235</h1>
+                            <h1>3,946</h1>
                         </div>
                         <div class="change">
                             <h5>3%</h5>
@@ -139,7 +141,7 @@
                     </div>
                     <div class="box-body">
                         <div class="number">
-                            <h1>$1,334</h1>
+                            <h1>$57,395</h1>
                         </div>
                         <div class="change">
                             <h5>5%</h5>
@@ -179,25 +181,25 @@
                 </div>
             </div>
             <div class="circle-analysis-footer">
-                <div class="parameter-fragment">
+                <div class="circle-chart-parameter-fragment">
                     <div class="color-representation lime"></div>
                     <div class="color-description">
                         <p class="color-text">Plain text</p>
                     </div>
                 </div>
-                <div class="parameter-fragment">
+                <div class="circle-chart-parameter-fragment">
                     <div class="color-representation green"></div>
                     <div class="color-description">
                         <p class="color-text">Photo links</p>
                     </div>
                 </div>
-                <div class="parameter-fragment">
+                <div class="circle-chart-parameter-fragment">
                     <div class="color-representation blue"></div>
                     <div class="color-description">
                         <p class="color-text">Page links</p>
                     </div>
                 </div>
-                <div class="parameter-fragment">
+                <div class="circle-chart-parameter-fragment">
                     <div class="color-representation cyan"></div>
                     <div class="color-description">
                         <p class="color-text">Video links</p>
@@ -208,15 +210,56 @@
         <!-- The fragment which contains the linear chart (incomplete) -->
         <div class="line-analysis-container">
             <div class="line-analysis-main">
-                <h4 class="line-analysis-header">Interactions</h4>
-                <canvas id="line-chart" width="400" height="200"></canvas>
+                <h3 class="line-analysis-header">Interactions</h3>
+                <canvas id="line-chart" width="500" height="220"></canvas>
             </div>
             <div class="line-analysis-footer">
-
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation light-blue"></div>
+                    <div class="color-description">
+                        <p class="color-text">Posts</p>
+                    </div>
+                </div>
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation tomato"></div>
+                    <div class="color-description">
+                        <p class="color-text">Likes</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pillar-analysis-container">
-            
+            <div class="pillar-analysis-header">
+                <h2>Revenue</h2>
+            </div>
+            <div class="pillar-chart-container">
+                <div class="vertical-line"></div>
+                <div class="line-separation line-1"></div>
+                <div class="line-separation line-2"></div>
+                <div class="line-separation line-3"></div>
+                <div class="line-separation line-4"></div>
+                <div class="line-separation line-5"></div>
+                <div class="line-separation line-6"></div>
+                <div class="line-value value-1">4,000</div>
+                <div class="line-value value-2">3,000</div>
+                <div class="line-value value-3">2,000</div>
+                <div class="line-value value-4">1,000</div>
+                <div class="unit">
+                    <h2>$</h2>
+                </div>
+                <div class="pillar pillar-1">2,745</div>
+                <div class="pillar pillar-2">3,138</div>
+                <div class="pillar pillar-3">2,119</div>
+                <div class="pillar pillar-4">3,707</div>
+                <div class="pillar pillar-5">4,231</div>
+                <div class="pillar pillar-6">3,674</div>
+                <div class="text text-1">Apr</div>
+                <div class="text text-2">May</div>
+                <div class="text text-3">Jun</div>
+                <div class="text text-4">Jul</div>
+                <div class="text text-5">Aug</div>
+                <div class="text text-6">Sep</div>
+            </div>
         </div>
     </div>
 </body>

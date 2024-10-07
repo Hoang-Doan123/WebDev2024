@@ -3,6 +3,8 @@ const path = require('path');
 const app = express();
 const port = 5500
 
+const routes = express.Router()
+
 app.use(express.static("Public"))
 
 app.get("/", (req, res) => {
@@ -12,6 +14,32 @@ app.get("/", (req, res) => {
 app.get("/twitter", (req, res) => {
     res.sendFile(path.join(__dirname, 'Views', 'twitter.html'));
 })
+
+routes.get("/audience", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'audience.html'));
+})
+
+routes.get("/comments", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'comments.html'));
+})
+
+routes.get("/revenue", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', "revenue.html"));
+})
+
+routes.get("/likes", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'likes.html'));
+})
+
+routes.get("/reposts", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'reposts.html'))
+})
+
+routes.get("/followers", (req, res) => {
+    res.sendFile(path.join(__dirname, 'Views', 'followers.html'))
+})
+
+app.use("/twitter", routes)
 
 app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
