@@ -9,12 +9,12 @@ const percentageCommentsDataSet = [
 ]
 
 const dataSets = [
-    {bigBar: 0.7843, smallBar: 0.1241},
-    {bigBar: 0.6425, smallBar: 0.0871},
-    {bigBar: 0.7424, smallBar: 0.1975},
-    {bigBar: 0.6253, smallBar: 0.1632},
-    {bigBar: 0.7561, smallBar: 0.1321},
-    {bigBar: 0.6472, smallBar: 0.1540}
+    {bigBar: 0.5443, smallBar: 0.0841},
+    {bigBar: 0.6525, smallBar: 0.0871},
+    {bigBar: 0.4324, smallBar: 0.0575},
+    {bigBar: 0.5253, smallBar: 0.0632},
+    {bigBar: 0.5561, smallBar: 0.0521},
+    {bigBar: 0.6072, smallBar: 0.0754}
 ]
 
 backButton = document.getElementById("back-button")
@@ -38,8 +38,11 @@ window.onload = () => {
     })
 
     document.querySelectorAll(".pillar-group.active").forEach((query, index) => {
-        console.log(query)
-        query.querySelector(".pillar-big-data").style.height = `${dataSets[index].bigBar * 250}px`
-        query.querySelector(".pillar-small-data").style.height = `${dataSets[index].smallBar * 250}px`
+        bigData = query.querySelector(".pillar-big-data")
+        bigData.style.height = `${dataSets[index].bigBar * 250}px`
+        bigData.textContent = `${Math.round(dataSets[index].bigBar * 1000) / 10}K`
+        smallData = query.querySelector(".pillar-small-data")
+        smallData.style.height = `${dataSets[index].smallBar * 250}px`
+        smallData.textContent = `${Math.round(dataSets[index].smallBar * 1000) / 10}K`
     })
 }
