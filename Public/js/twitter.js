@@ -4,7 +4,7 @@ backButton.addEventListener("click", () => {
     window.location.href = "/"
 })
 
-const routes = ['likes', 'reposts', 'comments', 'audience', 'followers', 'revenue']
+const routes = ['likes', 'reposts', 'comments', 'audience', 'audience', 'revenue']
 
 dataTitles = document.querySelectorAll(".title")
 for (let i = 0; i < dataTitles.length; i++) {

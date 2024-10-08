@@ -18,7 +18,8 @@ body {
     --outer-circle-diameter: 250px;
     --inner-circle-diameter: 150px;
     --line-padding: 45px;
-    --pillar-width: 50px;
+    --single-pillar-width: 50px;
+    --double-pillar-width: 60px;
     --pillar-gap: 16px;
 }
 
@@ -233,7 +234,7 @@ body {
 }
 
 .pillar-chart .pillar {
-    width: var(--pillar-width);
+    width: var(--single-pillar-width);
     height: 0;
     background-color: #3498db;
     color: crimson;
@@ -250,65 +251,126 @@ body {
     visibility: visible;
 }
 
-.pillar.pillar-1.active {
-    height: calc(250px * 0.5490);
-}
-
-.pillar.pillar-2.active {
-    height: calc(250px * 0.6276);
-}
-
-.pillar.pillar-3.active {
-    height: calc(250px * 0.4238);
-}
-
-.pillar.pillar-4.active {
-    height: calc(250px * 0.7414);
-}
-
-.pillar.pillar-5.active {
-    height: calc(250px * 0.8462);
-}
-
-.pillar.pillar-6.active {
-    height: calc(250px * 0.7348);
-}
-
-.pillar.pillar-7.active {
-    height: calc(250px * 0.6932);
-}
-
 .pillar-chart .text {
     position: absolute;
     bottom: 0px;
 }
 
+.pillar-chart.chart-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.pillar-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: var(--double-pillar-width);
+    visibility: hidden;
+}
+
+.double-pillar {
+    width: var(--double-pillar-width);
+    height: 0;
+    color: white;
+    text-align: center;
+    transition: height 0.9s ease;
+    border: 1px solid rgb(13, 13, 13);
+    margin: 0 calc(var(--pillar-gap) / 2);
+}
+
+.pillar-big-data {
+    background-color: rgb(14, 187, 235);
+}
+
+.pillar-small-data {
+    background-color: tomato;
+}
+
+.pillar-group.active {
+    visibility: visible;
+}
+
+/* .double-pillar.pillar-big-1{
+    height: calc(250px * 0.344)
+}
+
+.double-pillar.pillar-big-2{
+    height: calc(250px * 0.546)
+}
+
+.double-pillar.pillar-big-3{
+    height: calc(250px * 0.492)
+}
+
+.double-pillar.pillar-big-4{
+    height: calc(250px * 0.642)
+}
+
+.double-pillar.pillar-big-5{
+    height: calc(250px * 0.784)
+}
+
+.double-pillar.pillar-big-6{
+    height: calc(250px * 0.982)
+}
+
+.double-pillar.pillar-small-1{
+    height: calc(250px * 0.344 * 0.212)
+}
+
+.double-pillar.pillar-small-2{
+    height: calc(250px * 0.546 * 0.421)
+}
+
+.double-pillar.pillar-small-3{
+    height: calc(250px * 0.345 * 0.231)
+}
+
+.double-pillar.pillar-small-4{
+    height: calc(250px * 0.345 * 0.532)
+}
+
+.double-pillar.pillar-small-5{
+    height: calc(250px * 0.345 * 0.313)
+}
+
+.double-pillar.pillar-small-6{
+    height: calc(250px * 0.345 * 0.124)
+} */
+
 .pillar-chart .text-1 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 0);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 0);
 }
 
 .pillar-chart .text-2 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 1);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 1);
 }
 
 .pillar-chart .text-3 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 2);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 2);
 }
 
 .pillar-chart .text-4 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 3);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 3);
 }
 
 .pillar-chart .text-5 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 4);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 4);
 }
 
 .pillar-chart .text-6 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 5);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 5);
 }
 
 .pillar-chart .text-7 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 6);
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--single-pillar-width)) * 6);
 }
 
 @keyframes rotateAppear {

@@ -35,10 +35,6 @@ routes.get("/reposts", (req, res) => {
     res.sendFile(path.join(__dirname, 'Views', 'reposts.html'))
 })
 
-routes.get("/followers", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Views', 'followers.html'))
-})
-
 app.use("/twitter", routes)
 
 app.listen(port, () => {
