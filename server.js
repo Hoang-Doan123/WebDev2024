@@ -28,7 +28,7 @@ routes.get("/revenue", (req, res) => {
 })
 
 routes.get("/interactions", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Views', 'likes.html'));
+    res.sendFile(path.join(__dirname, 'Views', 'interactions.html'));
 })
 
 app.use("/twitter", routes)
