@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    min-width: 450px;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-border-raidus: 10px;
+    --circular-border-raidus: 50%;
+    --main-box-shadow-color: rgb(166, 169, 173);
+    --main-border-color: conic-gradient(rgb(194, 6, 28), rgb(227, 47, 23), rgb(224, 119, 13), rgb(227, 216, 11));
+    --line-padding: 40px;
+    --pillar-width: 50px;
+    --pillar-gap: 16px;
+    --outer-circle-diameter: 190px;
+    --inner-circle-diameter: 130px;
+}
+
+.navigation-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.back-arrow-button, .setting_button_container {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+}
+
+.x-logo-container {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.back-arrow-button img, .setting_button_container img, .x-logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.line-analysis-chart {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    margin: 10px 15px;
+    box-shadow: 2px 4px 10px var(--main-box-shadow-color);
+    border-radius: var(--main-border-raidus);
+}
+
+.line-analysis-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-analysis-side {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    padding: 10vh 0;
+    row-gap: 30px;
+    column-gap: 50px;
+}
+
+.overall-box {
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-border-raidus);
+    padding: 1rem;
+    background: white;
+    box-shadow: 2px 4px 10px var(--main-box-shadow-color);
+    position: relative;
+    animation: upAppear 0.75s ease-in-out;
+}
+
+.overall-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--main-border-color);
+    border-radius: var(--main-border-raidus); /* Ensures circular gradient border */
+    z-index: -99; /* Puts the gradient behind the content */
+    padding: 2px; /* Controls the width of the gradient */
+    margin: -1px;
+    animation: upAppear 1.5s ease-in-out;
+}
+
+.body-bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.circle {
+    width: var(--outer-circle-diameter);
+    height: var(--outer-circle-diameter);
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    background-image: conic-gradient(
+        rgb(196, 199, 32) 0% 12.4%,
+        rgb(235, 126, 16) 12.4% 29.7%,
+        rgb(230, 16, 30) 29.7% 50.4%,
+        rgb(217, 30, 211) 50.4% 76.2%,
+        rgb(148, 19, 235) 76.2% 91%,
+        rgb(62, 46, 130) 91% 100%
+    )
+}
+
+.circle-inner {
+    width: var(--inner-circle-diameter);
+    height: var(--inner-circle-diameter);
+    background-color: white;
+    z-index: 1;
+}
+
+.circle-inner h3 {
+    max-width: 60px;
+    text-align: center;
+}
+
+.circle-chart-container {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-border-raidus);
+    box-shadow: 2px 4px 10px var(--main-box-shadow-color);
+    gap: 10px;
+}
+
+.circle, .circle-inner {
+    border-radius: var(--circular-border-raidus);
+    border: 1px solid var(--main-border-color);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: rotate(0deg) scale(0.5);
+    animation: rotateAppear 3s ease-out forwards;
+}
+
+.circle-chart-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+@keyframes rotateAppear {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(180deg) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(360deg) scale(1);
+      }
+}
+
+@keyframes upAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .line-analysis-chart {
+        grid-template-columns: auto;
+    }
+
+    .line-analysis-side {
+        grid-template-columns: repeat(4, auto);
+        column-gap: 10px;
+    }
+
+    .body-bottom {
+        grid-template-columns: auto;
+    }
+
+    .circle-chart-footer {
+        gap: 0;
+        column-gap: 14px;
+        row-gap: 6px;
+    }
+}
