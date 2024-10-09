@@ -367,6 +367,15 @@ body {
       }
 }
 
+@keyframes upAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 900px) {
     .circle-analysis-container {
         display: grid;

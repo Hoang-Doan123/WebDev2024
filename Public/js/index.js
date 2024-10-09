@@ -36,6 +36,16 @@ class DrawLineChart {
         letters,
         ...dataPoints
     ) {
+        const len = [
+            units.length,
+            cycles.length,
+            unitsStartPoints.length,
+            lineStrokeStyles.length,
+            dataPoints.length
+        ]
+        if ((new Set(len).size !== 1)) {
+            throw RangeError("units, cycles, unitStartPoints, lineStrokeStyles, labels must have the same length")
+        }
         this.ctx = ctx
         this.dataPoints = dataPoints
         this.units = units
@@ -79,7 +89,7 @@ class DrawLineChart {
 
         for (let i = 0; i < this.units.length; i++) {
             this.setUnitValue(this.unitsStartPoints[i], this.cycles[i], this.letters)
-            this.fillUnits(this.units[i], 0)
+            this.fillUnits(this.units[i], this.unitsStartPoints[i])
         }
 
         for (let i = 0; i < this.dataPoints.length; i++) {

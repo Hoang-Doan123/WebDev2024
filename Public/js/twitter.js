@@ -9,9 +9,13 @@ const routes = ['interactions', 'interactions', 'comments', 'audience', 'audienc
 dataTitles = document.querySelectorAll(".title")
 for (let i = 0; i < dataTitles.length; i++) {
     dataTitles[i].addEventListener("click", () => {
-        window.location.href = `/twitter/${routes[i]}`
+        window.location.href = `./${routes[i]}.html`
     })
 }
+
+document.querySelector(".line-analysis-header").addEventListener("click", () => {
+    window.location.href = "./interactions.html"
+})
 
 window.onload = () => {
     document.querySelectorAll(".pillar").forEach(q => {

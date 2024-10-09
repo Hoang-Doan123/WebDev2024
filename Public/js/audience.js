@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 
 const dlc = new DrawLineChart(
     ctx,
-    ["followers"],
+    ["Followers"],
     [2000],
     [START_X - 30],
     ['rgb(75, 192, 192)'],

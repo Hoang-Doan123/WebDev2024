@@ -17,12 +17,6 @@ const dataSets = [
     {bigBar: 0.6072, smallBar: 0.0754}
 ]
 
-backButton = document.getElementById("back-button")
-
-backButton.addEventListener("click", () => {
-    window.location.href = "/twitter"
-})
-
 window.onload = () => {
     document.querySelectorAll(".pillar").forEach(q => {
         q.classList.add("active")
