@@ -8,6 +8,6 @@ Students are expected to:
 * Push your commits regularly, with proper commit messages
 
 Group Info
-=======================
+==============================
 * Group ID: *5*
 * Project Name: *Social Media Dashboard*
