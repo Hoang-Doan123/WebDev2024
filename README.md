@@ -7,10 +7,7 @@ Students are expected to:
 * Update student name and ID to this README file
 * Push your commits regularly, with proper commit messages
 
-Student Info
+Group Info
 =======================
-
-* Name: *Doan Duc Hoang*
-* ID: *BA12-078*
 * Group ID: *5*
 * Project Name: *Social Media Dashboard*
