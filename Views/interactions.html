@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter/X Interactions</title>
     <link rel="stylesheet" href="/css/interactions.css">
-    <script defer src="/js/interactions.js"></script>
+    <script defer src="/js/interactions.js" type="module"></script>
+    <script defer src="/js/pageFunction.js"></script>
 </head>
 <body>
     <div class="navigation-bar-container">
@@ -19,25 +20,10 @@
             <img src="/Images/setting_icon.png" height="30px">
         </div>
     </div>
-    <div class="circle-analysis-container">
-        <div class="circle-chart">
-            <div class="circle-inner">
-                <h4>Total: 420,2K</h4>
-            </div>
-        </div>
-        <div class="circle-chart-footer">
-            <div class="circle-chart-parameter-fragment">
-                <div class="color-description">
-                    <h1 style="color: blue">42,1K</h1>
-                    <h3>Verified</h3>
-                </div>
-            </div>
-            <div class="circle-chart-parameter-fragment">
-                <div class="color-description">
-                    <h1 style="color: cyan">377,9K</h1>
-                    <h3>Others</h3>
-                </div>
-            </div>
+    <div class="line-analysis-container">
+        <div class="line-analysis-main">
+            <h3 class="line-analysis-header">Interactions</h3>
+            <canvas id="line-chart" width="500" height="220"></canvas>
         </div>
     </div>
 </body>
