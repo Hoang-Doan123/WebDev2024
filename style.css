@@ -14,6 +14,17 @@
     cursor: pointer;
 }
 
+.home_btn img, .setting_btn img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.home_btn:hover img, .setting_btn:hover img {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+/* Tiêu đề chính của dashboard */
 .dashboard_title {
     text-align: center;
     font-size: 24px;
@@ -55,9 +66,37 @@ button:hover {
 .instagram_card,
 .youtube_card,
 .twitter_card {
-    border: 1px solid red;
-    border-radius: 15px;
-    padding-left: 50px;
-    padding-right: 600px;
-    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* color: black; */
+    text-align: center;
+}
+
+/* for YOUTUBE DASHBOARD */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.item {
+    flex: 1 1 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #515151;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.count {
+    display: block;
+    font-weight: 700;
+    color: #333;
 }
