@@ -1,10 +1,10 @@
 backButton = document.getElementById("back-button")
 
 backButton.addEventListener("click", () => {
-    window.location.href = "/"
+    window.location.href = "./main_interface.html"
 })
 
-const routes = ['interactions', 'interactions', 'comments', 'audience', 'audience', 'revenue']
+const routes = ['twitter_interactions', 'twitter_interactions', 'twitter_comments', 'twitter_audience', 'twitter_audience', 'twitter_revenue']
 
 dataTitles = document.querySelectorAll(".title")
 for (let i = 0; i < dataTitles.length; i++) {
@@ -14,7 +14,7 @@ for (let i = 0; i < dataTitles.length; i++) {
 }
 
 document.querySelector(".line-analysis-header").addEventListener("click", () => {
-    window.location.href = "./interactions.html"
+    window.location.href = "./twitter_interactions.html"
 })
 
 window.onload = () => {
