@@ -1,9 +1,8 @@
-/* Phần header */
 .heading_container {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 15px 30px; /* Thêm khoảng cách padding */
+    padding: 15px 30px; /* Add padding distance */
     /* background-color: #f8f9fa; */
     /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
 }
@@ -79,22 +78,27 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align items to the left */
+    margin-top: 20px; /* Optional: add some spacing from the title */
 }
+
 .item {
-    flex: 1 1 30%;
+    flex: 1 1 30%; /* Set items to take up 30% of the container width */
+    max-width: 150px; /* Set a maximum width for the items */
     background-color: #ffffff;
-    padding: 20px;
+    padding: 15px; /* Reduced padding for smaller items */
     text-align: center;
     border: 5px solid #515151;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .count {
     display: block;
     font-weight: 700;
