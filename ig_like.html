@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Likes Analytics</title>
+    <link rel="stylesheet" href="ig.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-back">
+            <a href="ig.html">&#8592;</a> 
+        </div>
+        <div class="header-title">
+            <h1>Instagram Likes Analytics</h1>
+        </div>
+    </header>
+
+    <section class="charts-section">
+        <div class="chart-container">
+            <h3>Likes Growth Over Time</h3>
+            <canvas id="lineChartLikes"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Likes by Source</h3>
+            <canvas id="pieChartLikes1"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Likes by Age Group</h3>
+            <canvas id="pieChartLikes2"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Monthly Like Increase</h3>
+            <canvas id="barChartLikes"></canvas>
+        </div>
+    </section>
+
+    <script>
+
+
+const ctxLineLikes = document.getElementById('lineChartLikes').getContext('2d');
+const lineChartLikes = new Chart(ctxLineLikes, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'Likes',
+            data: [1500, 1700, 2200, 2700, 3500, 4100],
+            borderColor: '#ff9f43',
+            backgroundColor: 'rgba(255, 159, 67, 0.2)',
+            borderWidth: 2,
+            fill: true
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+const ctxPieLikes1 = document.getElementById('pieChartLikes1').getContext('2d');
+const pieChartLikes1 = new Chart(ctxPieLikes1, {
+    type: 'pie',
+    data: {
+        labels: ['Organic', 'Ads', 'Collaborations', 'Others'],
+        datasets: [{
+            label: 'Likes',
+            data: [2000, 1000, 800, 300],
+            backgroundColor: ['#ff9f43', '#57d9ff', '#57ff83', '#ff5e57'],
+            borderWidth: 1
+        }]
+    }
+});
+
+
+const ctxPieLikes2 = document.getElementById('pieChartLikes2').getContext('2d');
+const pieChartLikes2 = new Chart(ctxPieLikes2, {
+    type: 'pie',
+    data: {
+        labels: ['18-24', '25-34', '35-44', '45+'],
+        datasets: [{
+            label: 'Likes',
+            data: [2500, 1800, 1200, 600],
+            backgroundColor: ['#ffab57', '#57d9ff', '#57ff83', '#ff5e57'],
+            borderWidth: 1
+        }]
+    }
+});
+
+
+const ctxBarLikes = document.getElementById('barChartLikes').getContext('2d');
+const barChartLikes = new Chart(ctxBarLikes, {
+    type: 'bar',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'New Likes',
+            data: [1500, 200, 500, 500, 800, 600],
+            backgroundColor: '#ff9f43',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Analytics</title>
+    <link rel="stylesheet" href="ig.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-back">
+            <a href="ig.html">&#8592;</a> 
+        </div>
+        <div class="header-title">
+            <h1>IG Comments</h1>
+        </div>
+    </header>
+
+    <section class="charts-section">
+        <div class="chart-container">
+            <canvas id="mutualsChart" class="chart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="verifiedChart" class="chart"></canvas>
+        </div>
+    </section>
+
+    <section class="bar-charts">
+        <div class="bar-chart-container">
+            <h3>Average Comments Based On Day Of The Week</h3>
+            <canvas id="weeklyChart" class="chart"></canvas>
+        </div>
+        <div class="bar-chart-container">
+            <h3>Number Of Comments In Month</h3>
+            <canvas id="monthlyChart" class="chart"></canvas>
+        </div>
+    </section>
+
+    <script>
+       
+        const ctxMutuals = document.getElementById('mutualsChart').getContext('2d');
+        const mutualsChart = new Chart(ctxMutuals, {
+            type: 'pie',
+            data: {
+                labels: ['Mutuals', 'Strangers'],
+                datasets: [{
+                    label: 'Total: 68.2K',
+                    data: [12900, 55300],
+                    backgroundColor: ['#0c68ff', '#00eaff'],
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        
+        const ctxVerified = document.getElementById('verifiedChart').getContext('2d');
+        const verifiedChart = new Chart(ctxVerified, {
+            type: 'pie',
+            data: {
+                labels: ['Verified', 'Others'],
+                datasets: [{
+                    label: 'Total: 68.2K',
+                    data: [7500, 60700],
+                    backgroundColor: ['#00897b', '#78c2b5'],
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        
+        const ctxWeekly = document.getElementById('weeklyChart').getContext('2d');
+        const weeklyChart = new Chart(ctxWeekly, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Comments',
+                    data: [1373, 1569, 1060, 1853, 2116, 1837, 1733],
+                    backgroundColor: '#4f83cc',
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        const ctxMonthly = document.getElementById('monthlyChart').getContext('2d');
+        const monthlyChart = new Chart(ctxMonthly, {
+            type: 'bar',
+            data: {
+                labels: ['04/2024', '05/2024', '06/2024', '07/2024', '08/2024', '09/2024'],
+                datasets: [{
+                    label: 'Comments',
+                    data: [54400, 65400, 43200, 52500, 55600, 60700],
+                    backgroundColor: '#3b82c4',
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
