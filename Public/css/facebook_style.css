@@ -18,6 +18,13 @@ body {
     --line-padding: 40px;
     --pillar-width: 50px;
     --pillar-gap: 16px;
+    --pillar-1: 10;
+    --pillar-2: 15;
+    --pillar-3: 27;
+    --pillar-4: 40;
+    --pillar-5: 11;
+    --pillar-6: 6;
+    --pillar-7: 14;
 }
 
 .navigation-bar-container {
@@ -442,31 +449,31 @@ body {
 }
 
 .pillar.pillar-1.active {
-    height: calc(250px * 0.2);
+    height: calc(250px * var(--pillar-1) / 50);
 }
 
 .pillar.pillar-2.active {
-    height: calc(250px * 0.3);
+    height: calc(250px * var(--pillar-2) / 50);
 }
 
 .pillar.pillar-3.active {
-    height: calc(250px * 0.54);
+    height: calc(250px * var(--pillar-3) / 50);
 }
 
 .pillar.pillar-4.active {
-    height: calc(250px * 0.8);
+    height: calc(250px * var(--pillar-4) / 50);
 }
 
 .pillar.pillar-5.active {
-    height: calc(250px * 0.22);
+    height: calc(250px * var(--pillar-5) / 50);
 }
 
 .pillar.pillar-6.active {
-    height: calc(250px * 0.12);
+    height: calc(250px * var(--pillar-6) / 50);
 }
 
 .pillar.pillar-7.active {
-    height: calc(250px * 0.28);
+    height: calc(250px * var(--pillar-7) / 50);
 }
 
 .pillar-chart-container .text {
