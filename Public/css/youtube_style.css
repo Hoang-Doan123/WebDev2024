@@ -59,7 +59,7 @@ body {
     grid-template-columns: auto auto;
 }
 
-.interaction-analyoutubeics {
+.interaction-analytics {
     padding: 1rem;
     margin: 10px 15px;
     border: 1px solid var(--main-box-shadow-color);
@@ -69,21 +69,21 @@ body {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.interaction-analyoutubeics-header {
+.interaction-analytics-header {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 6px;
 }
 
-.interaction-analyoutubeics-body {
+.interaction-analytics-body {
     display: grid;
     grid-template-columns: repeat(3, 210px);
     grid-template-rows: repeat(2, auto);
     gap: 10px;
 }
 
-.interaction-analyoutubeics-box {
+.interaction-analytics-box {
     display: block;
     border-radius: 10px;
     border: 2px solid var(--main-border-color);
