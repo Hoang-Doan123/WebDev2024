@@ -106,7 +106,7 @@ body {
 
 .chart-2 {
     background-image: conic-gradient(
-        rgb(50, 168, 143) 0% 11%,
+        rgb(168, 80, 50) 0% 11%,
         rgb(51, 153, 181) 11% 100%
     )
 }
@@ -117,6 +117,10 @@ body {
 
 .cyan {
     color: cyan;
+}
+
+.brown {
+    color: rgb(168, 80, 50);
 }
 
 .dark-green {
@@ -249,7 +253,7 @@ body {
     width: var(--single-pillar-width);
     height: 0;
     background-color: #3498db;
-    color: crimson;
+    color: black;
     text-align: center;
     margin-top: auto;
     transition: 0.9s;

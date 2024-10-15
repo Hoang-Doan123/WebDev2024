@@ -403,6 +403,10 @@ body {
     top: 275px;
 }
 
+.line-7 {
+    top: 325px;
+}
+
 .value-1 {
     top: 67px;
 }
@@ -438,27 +442,31 @@ body {
 }
 
 .pillar.pillar-1.active {
-    height: calc(250px * 0.5490);
+    height: calc(250px * 0.2);
 }
 
 .pillar.pillar-2.active {
-    height: calc(250px * 0.6276);
+    height: calc(250px * 0.3);
 }
 
 .pillar.pillar-3.active {
-    height: calc(250px * 0.4238);
+    height: calc(250px * 0.54);
 }
 
 .pillar.pillar-4.active {
-    height: calc(250px * 0.7414);
+    height: calc(250px * 0.8);
 }
 
 .pillar.pillar-5.active {
-    height: calc(250px * 0.8462);
+    height: calc(250px * 0.22);
 }
 
 .pillar.pillar-6.active {
-    height: calc(250px * 0.7348);
+    height: calc(250px * 0.12);
+}
+
+.pillar.pillar-7.active {
+    height: calc(250px * 0.28);
 }
 
 .pillar-chart-container .text {
@@ -488,6 +496,9 @@ body {
 
 .pillar-chart-container .text-6 {
     left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 5);
+}
+.pillar-chart-container .text-7 {
+    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 6);
 }
 
 @keyframes upAppear {

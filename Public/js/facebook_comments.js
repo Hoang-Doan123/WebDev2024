@@ -9,12 +9,12 @@ const percentageCommentsDataSet = [
 ]
 
 const dataSets = [
-    {bigBar: 0.5443, smallBar: 0.0841},
-    {bigBar: 0.6525, smallBar: 0.0871},
-    {bigBar: 0.4324, smallBar: 0.0575},
-    {bigBar: 0.5253, smallBar: 0.0632},
-    {bigBar: 0.5561, smallBar: 0.0521},
-    {bigBar: 0.6072, smallBar: 0.0754}
+    {bigBar: 0.54, smallBar: 0.08},
+    {bigBar: 0.65, smallBar: 0.08},
+    {bigBar: 0.43, smallBar: 0.05},
+    {bigBar: 0.52, smallBar: 0.06},
+    {bigBar: 0.55, smallBar: 0.05},
+    {bigBar: 0.60, smallBar: 0.07}
 ]
 
 window.onload = () => {
@@ -28,15 +28,15 @@ window.onload = () => {
 
     document.querySelectorAll(".pillar.active").forEach((query, index) => {
         query.style.height = `${percentageCommentsDataSet[index] * 250}px`
-        query.textContent = `${Math.round(percentageCommentsDataSet[index] * 2500)}`
+        query.textContent = `${Math.round(percentageCommentsDataSet[index] * 25)}`
     })
 
     document.querySelectorAll(".pillar-group.active").forEach((query, index) => {
         bigData = query.querySelector(".pillar-big-data")
         bigData.style.height = `${dataSets[index].bigBar * 250}px`
-        bigData.textContent = `${Math.round(dataSets[index].bigBar * 1000) / 10}K`
+        bigData.textContent = `${Math.round(dataSets[index].bigBar * 1000) / 10}`
         smallData = query.querySelector(".pillar-small-data")
         smallData.style.height = `${dataSets[index].smallBar * 250}px`
-        smallData.textContent = `${Math.round(dataSets[index].smallBar * 1000) / 10}K`
+        smallData.textContent = `${Math.round(dataSets[index].smallBar * 1000) / 10}`
     })
 }

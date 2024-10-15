@@ -8,12 +8,12 @@ const ctx = lineChart.getContext("2d")
 
 const dlc = new DrawLineChart(
     ctx,
-    ["likes"],
-    [100],
+    ["reacts"],
+    [10],
     [START_X - 30],
     ['rgb(33, 102, 51)'],
-    ["May", "Jun", "Jul", "Aug", "Sep"],
-    "K",
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "",
     [...randomNumberArray(32, 40, 170), 168]
 )
 
@@ -24,12 +24,12 @@ const ctx2 = lineChart2.getContext("2d")
 
 const dlc2 = new DrawLineChart(
     ctx2,
-    ["reposts"],
-    [40],
+    ["shares"],
+    [3],
     [START_X - 30],
     ["rgb(35, 35, 176)"],
-    ["May", "Jun", "Jul", "Aug", "Sep"],
-    "K",
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "",
     [...randomNumberArray(39, 30, 180), 102]
 )
 
