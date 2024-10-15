@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Interactions</title>
+    <link rel="stylesheet" href="Public/css/facebook_interactions.css">
+    <link rel="icon" href="Public/Images/facebook/facebook_icon.png">
+    <script defer src="Public/js/facebook_interactions.js" type="module"></script>
+    <script defer src="Public/js/facebook_interactions_2.js"></script>
+    <script defer src="Public/js/pageFunction.js"></script>
+</head>
+<body>
+    <div class="navigation-bar-container">
+        <div class="back-arrow-button" id="facebook-back-button">
+            <img src="Public/Images/Media/backArrow.png">
+        </div>
+        <div class="fb-logo-container">
+            <img src="Public/Images/facebook/facebook_icon.png">
+        </div>
+        <div class="setting_button_container">
+            <img src="Public/Images/setting_icon.png" height="30px">
+        </div>
+    </div>
+    <div class="like-analysis-container">
+        <div class="line-analysis-main">
+            <h3 class="line-analysis-header">Number Of Reacts</h3>
+            <canvas id="line-chart" width="500" height="220"></canvas>
+        </div>
+        <div class="circle-chart-container">
+            <div class="circle-chart-main">
+                <h3>Reacts This Week</h3>
+                <div class="circle chart-1">
+                    <div class="circle-inner">
+                        <h3>420</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-chart-footer">
+                <div class="color-description">
+                    <h2 style="color: rgb(12, 157, 235)">20% (84)</h2>
+                    <h3>Like</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(31, 56, 181)">15% (63)</h2>
+                    <h3>Love</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(182, 184, 191)">10% (42)</h2>
+                    <h3>Care</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(238, 38, 16)">15% (63)</h2>
+                    <h3>Haha</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(115, 195, 221)">10% (42)</h2>
+                    <h3>Wow</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(122, 239, 194)">10% (42)</h2>
+                    <h3>Sad</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(208, 217, 114)">20% (84)</h2>
+                    <h3>Angry</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="like-analysis-container">
+        <div class="line-analysis-main">
+            <h3 class="line-analysis-header">Number Of Shares</h3>
+            <canvas id="line-chart-2" width="500" height="220"></canvas>
+        </div>
+        <div class="circle-chart-container">
+            <div class="circle-chart-main">
+                <h3>Shares This Week</h3>
+                <div class="circle chart-2">
+                    <div class="circle-inner">
+                        <h3>50</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-chart-footer">
+                <div class="color-description">
+                    <h2 style="color: rgb(25, 209, 157)">24% (12)</h2>
+                    <h3>Video Shares</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(21, 77, 61)">50% (25)</h2>
+                    <h3>Post Shares</h3>
+                </div>
+                <div class="color-description">
+                    <h2 style="color: rgb(109, 78, 219)">26% (13)</h2>
+                    <h3>Image Shares</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
