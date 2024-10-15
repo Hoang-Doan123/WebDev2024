@@ -1,172 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram</title>
-
-  <link rel="stylesheet" href="ig.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="Public/Images/facebook/<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="Public/Images/instagram/instagram_icon.png">
+    <link rel="stylesheet" href="Public/css/ig.css" type="text/css">
+    <script defer src="Public/js/ig.js"></script>
+    <script defer src="Public/js/ig_2.js" type="module"></script>
 </head>
-
 <body>
-  <div class="container">
-    <div class="header">
-      <h1> Instagram</h1>
+    <div class="navigation-bar-container">
+        <div class="back-arrow-button" id="back-button">
+            <img src="Public/Images/Media/backArrow.png">
+        </div>
+        <div class="fb-logo-container">
+            <img src="Public/Images/instagram/instagram_icon.png">
+        </div>
+        <div class="setting_button_container">
+            <img src="Public/Images/setting_icon.png" height="30px">
+        </div>
     </div>
-
-    <div class="stats-grid">
-      <div class="stat-box">
-        <h3>Followers</h3>
-        <p><a href="ig_fl.html">1K2</a></p>
-
-      </div>
-      <div class="stat-box">
-        <h3>Impressions</h3>
-        <p>13.1K</p>
-      </div>
-      <div class="stat-box">
-        <h3>Like</h3>
-        <p><a href="ig_like.html">3K</a></p>
-      </div>
-      <div class="stat-box">
-        <h3>Share</h3>
-        <p><a href="ig_share.html">274</a></p>
-      </div>
-      <div class="stat-box">
-        <h3>Comment</h3>
-        <p><a href="ig_cmt.html">855</a></p>
-      </div>
+    <hr />
+    <div class="facebook-analysis-container">
+        <!-- The fragment which contains the table which shows the overall analysis -->
+        <div class="interaction-analytics">
+            <div class="interaction-analytics-header">
+                <h2>Overall data this month</h2>
+            </div>
+            <div class="interaction-analytics-body">
+                <!-- Analysis for reacts -->
+                <div class="likes-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/reacts.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Reacts</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>600,4K</h1>
+                        </div>
+                        <div class="change">
+                            <h5>4%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for reposts -->
+                <div class="reposts-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/share.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Shares</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>409,3K</h1>
+                        </div>
+                        <div class="change">
+                            <h5>10%</h5>
+                            <img src="Public/Images/Media/DownArrow.png" alt="" class="decrease-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for comments -->
+                <div class="comments-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/comment.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Comments</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>168,2K</h1>
+                        </div>
+                        <div class="change">
+                            <h5>12%</h5>
+                            <img src="Public/Images/Media/DownArrow.png" alt="" class="decrease-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for audiences -->
+                <div class="audience-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/Media/AudienceIcon.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Page Like</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>545,24M</h1>
+                        </div>
+                        <div class="change">
+                            <h5>17%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for new followers -->
+                <div class="new-followers-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/Media/NewFollowers.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Followers</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>37,946K</h1>
+                        </div>
+                        <div class="change">
+                            <h5>23%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for revenue -->
+                <div class="revenue-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/messenger.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Messages</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>550,395M</h1>
+                        </div>
+                        <div class="change">
+                            <h5>15%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The fragment which contains circle chart-->
+        <div class="circle-analysis-container">
+            <div class="circle-analysis-main">
+                <div class="circle-analysis-header">
+                    <h3>Engagement Habits</h3>
+                </div>
+                <div class="circle-analysis-content">
+                    <div class="circle-chart-container">
+                        <div class="circle chart-1">
+                            <div class="circle-inner">
+                                <h4>Total: 1854</h4>
+                            </div>
+                        </div>
+                        <div class="circle-chart-footer">
+                            <p class="chart-footer-text">August</p>
+                        </div>
+                    </div>
+                    <div class="circle-chart-container">
+                        <div class="circle chart-2">
+                            <div class="circle-inner">
+                                <h4>Total: 2967</h4>
+                            </div>
+                        </div>
+                        <div class="circle-chart-footer">
+                            <p class="chart-footer-text">September</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-analysis-footer">
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation lime"></div>
+                    <div class="color-description">
+                        <p class="color-text">Plain text</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation green"></div>
+                    <div class="color-description">
+                        <p class="color-text">Photo links</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation blue"></div>
+                    <div class="color-description">
+                        <p class="color-text">Page links</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation cyan"></div>
+                    <div class="color-description">
+                        <p class="color-text">Video links</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The fragment which contains the linear chart (incomplete) -->
+        <div class="line-analysis-container">
+            <div class="line-analysis-main">
+                <h3 class="line-analysis-header">Interactions</h3>
+                <canvas id="line-chart" width="500" height="250"></canvas>
+            </div>
+            <div class="line-analysis-footer">
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation light-blue"></div>
+                    <div class="color-description">
+                        <p class="color-text">Posts</p>
+                    </div>
+                </div>
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation tomato"></div>
+                    <div class="color-description">
+                        <p class="color-text">Reacts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pillar-analysis-container">
+            <div class="pillar-analysis-header">
+                <h2>Messages</h2>
+            </div>
+            <div class="pillar-chart-container">
+                <div class="vertical-line"></div>
+                <div class="line-separation line-1"></div>
+                <div class="line-separation line-2"></div>
+                <div class="line-separation line-3"></div>
+                <div class="line-separation line-4"></div>
+                <div class="line-separation line-5"></div>
+                <div class="line-separation line-6"></div>
+                <div class="line-value value-1">4,000</div>
+                <div class="line-value value-2">3,000</div>
+                <div class="line-value value-3">2,000</div>
+                <div class="line-value value-4">1,000</div>
+                <div class="unit">
+                    <h2>$</h2>
+                </div>
+                <div class="pillar pillar-1">2,745</div>
+                <div class="pillar pillar-2">3,138</div>
+                <div class="pillar pillar-3">2,119</div>
+                <div class="pillar pillar-4">3,707</div>
+                <div class="pillar pillar-5">4,231</div>
+                <div class="pillar pillar-6">3,674</div>
+                <div class="text text-1">Apr</div>
+                <div class="text text-2">May</div>
+                <div class="text text-3">Jun</div>
+                <div class="text text-4">Jul</div>
+                <div class="text text-5">Aug</div>
+                <div class="text text-6">Sep</div>
+                
+            </div>
+        </div>
     </div>
-
-    
-    <div class="charts-container">
-      
-      <div class="chart">
-        <h3>Day</h3>
-        <div class="bar-chart">
-          <canvas id="impressions-chart"></canvas>
-        </div>
-      </div>
-
-      <div class="chart">
-        <h3>Interactions</h3>
-        <div class="bar-chart">
-          <canvas id="interaction-chart"></canvas> 
-        </div>
-      </div>
-      
-      
-      <div class="chart">
-        <h3>Interaction Distribution</h3>
-        <div class="pie-chart">
-          <canvas id="distribution-chart"></canvas>
-        </div>
-      </div>
-
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        
-        const ctx1 = document.getElementById('impressions-chart').getContext('2d');
-        const impressionsChart = new Chart(ctx1, {
-          type: 'bar',
-          data: {
-            labels: ['Mon', 'Tus', 'Wen ', 'Thus', 'Fri', 'Sat', 'Sun'],
-            datasets: [{
-              label: 'Impressions',
-              data: [1500, 1800, 1600, 1300, 2000, 2800, 1900],
-              backgroundColor: 'rgba(54, 162, 235, 0.6)',
-              borderColor: 'rgba(54, 162, 235, 1)',
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-    
-       
-        const ctx2 = document.getElementById('interaction-chart').getContext('2d');
-        const interactionChart = new Chart(ctx2, {
-          type: 'bar',
-          data: {
-            labels: ['24/3', '25/3', '26/3', '27/3', '28/3', '29/3', '30/3', '1/4'],
-            datasets: [
-              {
-                label: 'Members',
-                data: [50, 60, 55, 70, 90, 85, 75, 65],
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                stack: 'Stack 0',
-              },
-          
-              {
-                label: 'Call',
-                data: [15, 25, 30, 45, 55, 40, 35, 50],
-                backgroundColor: 'rgba(153, 102, 255, 0.6)',
-                stack: 'Stack 2',
-              },
-              {
-                label: 'Mess',
-                data: [30, 35, 40, 45, 50, 55, 60, 65],
-                backgroundColor: 'rgba(255, 206, 86, 0.6)',
-                stack: 'Stack 3',
-              }
-            ]
-          },
-          options: {
-            scales: {
-              x: {
-                stacked: true,
-              },
-              y: {
-                stacked: true,
-                beginAtZero: true
-              }
-            }
-          }
-        });
-    
-        const ctx3 = document.getElementById('distribution-chart').getContext('2d');
-        const distributionChart = new Chart(ctx3, {
-          type: 'pie',
-          data: {
-            labels: ['Like', 'Share', 'Comment'],
-            datasets: [{
-              data: [3000, 274, 855],
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)'
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-              ],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: 'top',
-              },
-              title: {
-                display: true,
-                text: 'Interaction Distribution'
-              }
-            }
-          }
-        });
-  
-    
-      </script>
-</body>
-
-</html>
