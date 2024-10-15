@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="header-back">
-            <a href="ig.html">&#8592;</a> <!-- Thay bằng link đúng -->
+            <a href="ig.html">&#8592;</a> 
         </div>
         <div class="header-title">
             <h1>IG Comments</h1>
@@ -38,7 +38,7 @@
     </section>
 
     <script>
-        // Pie chart for mutuals/strangers
+       
         const ctxMutuals = document.getElementById('mutualsChart').getContext('2d');
         const mutualsChart = new Chart(ctxMutuals, {
             type: 'pie',
@@ -53,7 +53,7 @@
             }
         });
 
-        // Pie chart for verified/others
+        
         const ctxVerified = document.getElementById('verifiedChart').getContext('2d');
         const verifiedChart = new Chart(ctxVerified, {
             type: 'pie',
@@ -68,7 +68,7 @@
             }
         });
 
-        // Bar chart for average comments based on days of the week
+        
         const ctxWeekly = document.getElementById('weeklyChart').getContext('2d');
         const weeklyChart = new Chart(ctxWeekly, {
             type: 'bar',
@@ -83,7 +83,6 @@
             }
         });
 
-        // Bar chart for number of comments in each month
         const ctxMonthly = document.getElementById('monthlyChart').getContext('2d');
         const monthlyChart = new Chart(ctxMonthly, {
             type: 'bar',
