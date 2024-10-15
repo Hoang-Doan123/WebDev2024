@@ -18,7 +18,7 @@
     <div class="stats-grid">
       <div class="stat-box">
         <h3>Followers</h3>
-        <p>1.2K</p>
+        <p><a href="ig_fl.html">1K2</a></p>
 
       </div>
       <div class="stat-box">
@@ -27,15 +27,15 @@
       </div>
       <div class="stat-box">
         <h3>Like</h3>
-        <p>3.0K</p>
+        <p><a href="ig_like.html">3K</a></p>
       </div>
       <div class="stat-box">
         <h3>Share</h3>
-        <p>274</p>
+        <p><a href="ig_share.html">274</a></p>
       </div>
       <div class="stat-box">
         <h3>Comment</h3>
-        <p>855</p>
+        <p><a href="ig_cmt.html">855</a></p>
       </div>
     </div>
 
@@ -55,6 +55,14 @@
           <canvas id="interaction-chart"></canvas> 
         </div>
       </div>
+      
+      
+      <div class="chart">
+        <h3>Interaction Distribution</h3>
+        <div class="pie-chart">
+          <canvas id="distribution-chart"></canvas>
+        </div>
+      </div>
 
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -64,7 +72,7 @@
         const impressionsChart = new Chart(ctx1, {
           type: 'bar',
           data: {
-            labels: ['Thứ Bảy', 'Thứ Sáu', 'Thứ Năm', 'Thứ Tư', 'Thứ Ba', 'Thứ Hai', 'Chủ Nhật'],
+            labels: ['Mon', 'Tus', 'Wen ', 'Thus', 'Fri', 'Sat', 'Sun'],
             datasets: [{
               label: 'Impressions',
               data: [1500, 1800, 1600, 1300, 2000, 2800, 1900],
@@ -87,7 +95,7 @@
         const interactionChart = new Chart(ctx2, {
           type: 'bar',
           data: {
-            labels: ['24 Tháng 3', '25 Tháng 3', '26 Tháng 3', '27 Tháng 3', '28 Tháng 3', '29 Tháng 3', '30 Tháng 3', '1 Tháng 4'],
+            labels: ['24/3', '25/3', '26/3', '27/3', '28/3', '29/3', '30/3', '1/4'],
             datasets: [
               {
                 label: 'Members',
@@ -123,7 +131,39 @@
           }
         });
     
-   
+        const ctx3 = document.getElementById('distribution-chart').getContext('2d');
+        const distributionChart = new Chart(ctx3, {
+          type: 'pie',
+          data: {
+            labels: ['Like', 'Share', 'Comment'],
+            datasets: [{
+              data: [3000, 274, 855],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(255, 206, 86, 0.8)'
+              ],
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: 'Interaction Distribution'
+              }
+            }
+          }
+        });
   
     
       </script>
