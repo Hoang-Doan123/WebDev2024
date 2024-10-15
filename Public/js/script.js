@@ -4,17 +4,17 @@ facebookCard.addEventListener('click', () => {
     window.location.href = "./facebook.html"
 })
 
- const igCard = document.querySelector('.ig_card')
+const igCard = document.querySelector('.instagram_card')
 
-    igCard.addEventListener('click', () => {
-     window.location.href = "./ig.html"
- })
+igCard.addEventListener('click', () => {
+    window.location.href = "./ig.html"
+})
 
-// const youtubeCard = document.querySelector('.youtube_card')
+const youtubeCard = document.querySelector('.youtube_card')
 
-// youtubeCard.addEventListener('click', () => {
-//     window.location.href = "./youtube.html"
-// })
+youtubeCard.addEventListener('click', () => {
+    window.location.href = "./youtube.html"
+})
 
 const twitterCard = document.querySelector('.twitter_card')
 
