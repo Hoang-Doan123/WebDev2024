@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-border-raidus: 20px;
+    --circular-border-raidus: 50%;
+    --main-box-shadow-color: rgb(166, 169, 173);
+    --main-border-color: rgb(78, 79, 79);
+    --outer-circle-diameter: 250px;
+    --inner-circle-diameter: 150px;
+    --line-padding: 55px;
+    --single-pillar-width: 50px;
+    --double-pillar-width: 60px;
+    --single-pillar-gap: 16px;
+    --double-pillar-gap: 24px;
+    --main-background: #ffffff;
+    --title-color: #000000;
+    --image-filter: brightness(0) invert(0);
+    --up-data-background: 
+}
+
+.dark-mode {
+    --main-background: #000000;
+    --title-color: #ffffff;
+    --image-filter: brightness(0) invert(1);
+}
+
+body {
+    height: 100vh;
+    min-width: 750px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-background);
+}
+
+.navigation-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.back-arrow-button, .setting_button_container {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+}
+
+.x-logo-container {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.back-arrow-button img, .setting_button_container img, .x-logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-arrow-button img, .setting_button_container img {
+    filter: var(--image-filter);
+}
+
+.revenue-analysis-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.line-analysis-header {
+    color: var(--title-color);
+}
+
+.line-analysis-main {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    border-radius: var(--main-border-raidus);
+    border: 1px solid var(--main-box-shadow-color);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.circle-chart-container {
+    border-radius: var(--main-border-raidus);
+    border: 1px solid var(--main-box-shadow-color);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.circle-chart-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-chart-header {
+    text-align: center;
+    color: var(--title-color);
+    padding: 1rem;
+}
+
+.circle {
+    width: var(--outer-circle-diameter);
+    height: var(--outer-circle-diameter);
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    background-image: conic-gradient(
+        rgb(196, 199, 32) 0% 60%,
+        rgb(235, 126, 16) 60% 90%,
+        rgb(230, 16, 30) 90% 100%
+    );
+}
+
+.circle-inner {
+    width: var(--inner-circle-diameter);
+    height: var(--inner-circle-diameter);
+    background-color: var(--main-background);
+    color: var(--title-color);
+    z-index: 1;
+}
+
+.circle-inner h4 {
+    max-width: 60px;
+    text-align: center;
+}
+
+.circle, .circle-inner {
+    border-radius: var(--circular-border-raidus);
+    border: 1px solid var(--main-border-color);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: rotate(0deg) scale(0.5);
+    animation: rotateAppear 3s ease-out forwards;
+}
+
+.circle-chart-footer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-items: flex-start;
+    gap: 6px;
+}
+
+.color-description {
+    padding: 0 6px;
+}
+
+.color-description h3 {
+    color: var(--title-color);
+}
+
+.circle-chart-parameter-fragment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: upAppear 1.1s ease-in-out;
+}
+
+.pillar-chart-analysis {
+    border-radius: 10px;
+    border: 1px solid var(--main-border-color);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.pillar-chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-color);
+}
+
+.pillar-chart-container {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px var(--line-padding);
+    position: relative;
+}
+
+.pillar-chart-container .vertical-line {
+    position: absolute;
+    background-color: var(--title-color);
+    width: 2px;
+    height: calc(100% - 36px);
+    left: var(--line-padding);
+    top: 17px;
+}
+
+.pillar-chart-container .line-value {
+    position: absolute;
+    color: var(--title-color);
+}
+
+.pillar-chart-container .line-separation {
+    position: absolute;
+    background-color: gray;
+    width: calc(100% - var(--line-padding) * 1.5);
+    height: 1px;
+    left: var(--line-padding)
+}
+
+.pillar-chart-container .unit-revenue {
+    position: absolute;
+    color: var(--title-color);
+    left: -10px;
+    top: 10px;
+}
+
+.pillar-chart-container .unit-loss {
+    position: absolute;
+    color: var(--title-color);
+    left: 10px;
+    top: 500px;
+}
+
+.pillar-chart-container .pillar {
+    width: var(--single-pillar-width);
+    height: 0;
+    color: var(--main-background);
+    text-align: center;
+    transition: 0.9s;
+    z-index: 1;
+    border: 1px solid rgb(13, 13, 13);
+    margin: 0 calc(var(--single-pillar-gap) / 2);
+}
+
+.pillar-chart-container .text {
+    position: absolute;
+    bottom: 0px;
+    color: var(--title-color);
+}
+
+.pillar-group {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start; 
+    width: var(--double-pillar-width);
+    visibility: hidden;
+    margin: 0 calc(var(--double-pillar-gap) / 2);
+}
+
+.pillar.up-data {
+    background-color: blue;
+}
+
+.pillar.down-data {
+    background-color: red;
+}
+
+.pillar-group.active {
+    visibility: visible;
+}
+
+@keyframes rotateAppear {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(180deg) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(360deg) scale(1);
+      }
+}
+
+@media (max-width: 1120px) {
+    .circle {
+        --outer-circle-diameter: 180px;
+    }
+
+    .circle-inner {
+        --inner-circle-diameter: 120px;
+    }
+}
+
+@media (max-width: 980px) {
+    .revenue-analysis-container {
+        grid-template-columns: auto;
+    }
+}

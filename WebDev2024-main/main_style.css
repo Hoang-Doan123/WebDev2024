@@ -1,0 +1,235 @@
+:root {
+    --main-background: linear-gradient(to right, #2825ec, #6838ec);
+    --filter: brightness(0) invert(1);
+}
+
+.dark-mode {
+    --main-background: linear-gradient(to right, #c2c2c2, #5c5b5b);
+    --filter: brightness(0) invert(0);
+}
+
+.heading_container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 30px 60px; 
+    background: linear-gradient(to right, #2825ec, #5454f0); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 20px; /* Set height for frame background */
+    padding: 10px; /* Inner distance */
+    background: linear-gradient(to right, #3e6dc4, #140000); /* Background color for the frame */
+    border-radius: 10px; /* Round the corners of the frame */
+}
+
+.home_btn, .setting_btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(to right, #e925b8, #1605ad); 
+    padding: 10px; /* Set padding for the button */
+    border-radius: 10px; 
+    margin: 0 10px; 
+    transition: background 0.33s; 
+}
+
+.home_btn:hover, .setting_btn:hover {
+    background: linear-gradient(to right, #cfcfff, #fa2ec4); 
+}
+
+.home_btn img, .setting_btn img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; 
+}
+
+.home_btn:hover img, .setting_btn:hover img {
+    transform: scale(1.15); 
+}
+
+/* Main title of dashboard */
+.dashboard_title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #030202;
+    margin-top: 60px;
+    letter-spacing: 1px;
+    cursor: context-menu;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container for the cards */
+.cards_container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+/* General format for the cards */
+button {
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    width: 460px;
+    height: 220px;
+    margin: 70px; 
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow, background-color 0.2s ease-in-out; 
+}
+
+button:hover {
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2); 
+    background-color: #f2f2f2;
+}
+
+/* Make sure every card has the same size and style */
+.facebook_card,
+.instagram_card,
+.youtube_card,
+.twitter_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Add the new styles here */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto; /* Enable scrolling */
+    transition: background-color 0.4s; /* Smooth background transition */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays behind all content */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px; /* Space between setting button and switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cac6ec;
+    transition: 0.1s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(0, 46, 253);
+    transition: 0.1s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.heading_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    z-index: 1; /* Keep content on top of video */
+    background: var(--main-background); /* Original gradient */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  
+}
+
+.dashboard_title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1; /* Keep content on top of video */
+    text-shadow: 
+        0 0 2px #c612cc,  
+        0 0 7px #b32fb8,
+        0 0 12px #b32fb8,
+        0 0 18px #b32fb8,
+        0 0 22px #b32fb8;  
+}
+
+.cards_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1; /* Keep content on top of video */
+}
+
+.first_row, .second_row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.1s; /* Smooth transition for color change */
+}
+
+button img {
+    display: block;
+    transition: filter 0.1s; /* Smooth transition for color change */
+}
+
+.home_btn img, .setting_btn img {
+    filter: var(--filter); /* Default to white */
+}
+
+body.dark-mode {
+    background-color: white; /* Set background to white */
+}
+
+body.dark-mode .dashboard_title
+/* body.dark-mode .home_btn img,
+body.dark-mode .setting_btn img { */
+{
+    filter: brightness(0) invert(0); /* Change all gadgets to black */
+} 
