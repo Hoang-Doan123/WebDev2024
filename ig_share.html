@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Shares Analytics</title>
+    <link rel="stylesheet" href="ig.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-back">
+            <a href="ig.html">&#8592;</a> 
+        </div>
+        <div class="header-title">
+            <h1>Instagram Shares Analytics</h1>
+        </div>
+
+    </header>
+
+    <section class="charts-section">
+        <div class="chart-container">
+            <h3>Shares Growth Over Time</h3>
+            <canvas id="lineChartShares"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Shares by Platform</h3>
+            <canvas id="pieChartShares"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Monthly Shares Increase</h3>
+            <canvas id="barChartShares1"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Shares by Type</h3>
+            <canvas id="barChartShares2"></canvas>
+        </div>
+    </section>
+
+    <script>
+// Line chart for shares growth over time
+const ctxLineShares = document.getElementById('lineChartShares').getContext('2d');
+const lineChartShares = new Chart(ctxLineShares, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'Shares',
+            data: [1000, 1200, 1600, 2100, 2900, 3600],
+            borderColor: '#57d9ff',
+            backgroundColor: 'rgba(87, 217, 255, 0.2)',
+            borderWidth: 2,
+            fill: true
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+// Pie chart for shares by platform
+const ctxPieShares = document.getElementById('pieChartShares').getContext('2d');
+const pieChartShares = new Chart(ctxPieShares, {
+    type: 'pie',
+    data: {
+        labels: ['Instagram Stories', 'Direct Messages', 'External Apps', 'Others'],
+        datasets: [{
+            label: 'Shares',
+            data: [1800, 900, 500, 400],
+            backgroundColor: ['#57d9ff', '#ff9f43', '#57ff83', '#ff5e57'],
+            borderWidth: 1
+        }]
+    }
+});
+
+// Bar chart for monthly shares increase
+const ctxBarShares1 = document.getElementById('barChartShares1').getContext('2d');
+const barChartShares1 = new Chart(ctxBarShares1, {
+    type: 'bar',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'New Shares',
+            data: [1000, 200, 400, 500, 800, 700],
+            backgroundColor: '#57d9ff',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+// Bar chart for shares by type
+const ctxBarShares2 = document.getElementById('barChartShares2').getContext('2d');
+const barChartShares2 = new Chart(ctxBarShares2, {
+    type: 'bar',
+    data: {
+        labels: ['Posts', 'Reels', 'Stories', 'IGTV'],
+        datasets: [{
+            label: 'Shares',
+            data: [1500, 2000, 1800, 600],
+            backgroundColor: ['#ff9f43', '#57d9ff', '#57ff83', '#ff5e57'],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+    </script>
+</body>
+</html>
