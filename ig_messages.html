@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Messages</title>
+    <link rel="stylesheet" href="Public/css/ig_messages.css">
+    <link rel="icon" href="Public/Images/instagram/instagram_icon.png">
+    <script defer src="Public/js/ig_messages.js" type="module"></script>
+    <script defer src="Public/js/pageFunction.js"></script>
+</head>
+<body>
+    <div class="navigation-bar-container">
+        <div class="back-arrow-button" id="ig-back-button">
+            <img src="Public/Images/Media/backArrow.png">
+        </div>
+        <div class="fb-logo-container">
+            <img src="Public/Images/instagram/instagram_icon.png">
+        </div>
+        <div class="setting_button_container">
+            <img src="Public/Images/setting_icon.png" height="30px">
+        </div>
+    </div>
+    <div class="revenue-analysis-container">
+        <div class="line-analysis-main">
+            <h3 class="line-analysis-header">Monthly Messages</h3>
+            <canvas id="line-chart" width="500" height="220"></canvas>
+        </div>
+        <div class="circle-chart-container">
+            <div class="circle">
+                <div class="circle-inner">
+                    <h4>Total: 57,395$</h4>
+                </div>
+            </div>
+            <div class="circle-chart-footer">
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(196, 199, 32)">60%</h1>
+                        <h3>Commercial</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(235, 126, 16)">30%</h1>
+                        <h3>External Engagement</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(230, 16, 30)">10%</h1>
+                        <h3>Monthly Pay</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
