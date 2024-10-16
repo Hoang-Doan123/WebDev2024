@@ -22,10 +22,16 @@
             <input type="checkbox" id="backgroundToggle">
             <span class="slider"></span>
         </label>
-        <div class="setting_btn">
+        <div class="setting_btn" id="settingButton">
             <img src="Public/Images/setting_icon.png" height="20px"> <!-- Adjust height as needed -->
         </div>
     </div>
+    
+    <script>
+        document.getElementById('settingButton').addEventListener('click', function() {
+            window.location.href = 'mainsetting.html';
+        });
+    </script>
 
     <div class="dashboard_title">
         <p>SOCIAL MEDIA DASHBOARD</p>
@@ -80,6 +86,7 @@
             backgroundVideo.play();
         });
     </script>
+    
 </body>
 </html>
 
