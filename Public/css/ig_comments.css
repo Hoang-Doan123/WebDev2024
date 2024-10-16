@@ -99,32 +99,32 @@ body {
 
 .chart-1 {
     background-image: conic-gradient(
-        blue 0% 19%,
-        cyan 19% 100%
+        rgb(156, 45, 221) 0% 19%,
+        rgb(209, 8, 52) 19% 100%
     )
 }
 
 .chart-2 {
     background-image: conic-gradient(
-        rgb(50, 168, 143) 0% 11%,
-        rgb(51, 153, 181) 11% 100%
+        rgb(168, 131, 50) 0% 11%,
+        rgb(155, 233, 10) 11% 100%
     )
 }
 
 .blue {
-    color: blue;
+    color: rgb(187, 66, 86);
 }
 
 .cyan {
-    color: cyan;
+    color: rgb(0, 100, 25);
 }
 
 .dark-green {
-    color: rgb(50, 168, 143);
+    color: rgb(194, 56, 14);
 }
 
 .ocean {
-    color: rgb(51, 153, 181);
+    color: rgb(187, 59, 144);
 }
 
 .circle-chart-footer {
