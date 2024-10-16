@@ -4,6 +4,12 @@ facebookCard.addEventListener('click', () => {
     window.location.href = "./facebook.html"
 })
 
+const settingBtn = document.querySelector('.setting_btn')
+
+settingBtn.addEventListener("click", () => {
+    window.location.href = "./main_setting.html"
+})
+
 // const igCard = document.querySelector('.ig_card')
 
 // igCard.addEventListener('click', () => {
