@@ -1,10 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto; /* Enable scrolling */
+    transition: background-color 0.4s; /* Smooth background transition */
+}
+:root {
+    --image-filter-value: brightness(0) invert(1);
+    --heading-background: linear-gradient(to right, #2825ec, #6838ec);
+    --home-btn-background: linear-gradient(to right, #e925b8, #1605ad);
+    --setting-btn-background: linear-gradient(to right, #e925b8, #1605ad);
+    --home-btn-background-hover: linear-gradient(to right, #cfcfff, #fa2ec4);
+}
+
+.dark-mode {
+    --image-filter-value: brightness(0) invert(0.09);
+    --heading-background: linear-gradient(to right, #c2c2c2, #5c5b5b);
+    --home-btn-background: linear-gradient(to right, #7c7c7c, #d8d8d8);
+    --home-btn-background-hover: linear-gradient(to right, #9B2323, #F3BD86);
+}
+
 .heading_container {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 30px 60px; 
-    background: linear-gradient(to right, #2825ec, #5454f0); 
+    padding: 30px 60px;
+    background: var(--heading-background); 
+    height: 105px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  
+    width: 100%;                     /* Make container stretch full width */
+    box-sizing: border-box;           /* Include padding in element's width */
 }
 
 .button-container {
@@ -21,7 +47,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    background: linear-gradient(to right, #e925b8, #1605ad); 
+    background: var(--home-btn-background); 
     padding: 10px; /* Set padding for the button */
     border-radius: 10px; 
     margin: 0 10px; 
@@ -29,7 +55,7 @@
 }
 
 .home_btn:hover, .setting_btn:hover {
-    background: linear-gradient(to right, #cfcfff, #fa2ec4); 
+    background: var(--home-btn-background-hover); 
 }
 
 .home_btn img, .setting_btn img {
@@ -92,14 +118,7 @@ button:hover {
 }
 
 /* Add the new styles here */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    overflow: auto; /* Enable scrolling */
-    transition: background-color 0.4s; /* Smooth background transition */
-}
+
 
 .background-video {
     position: fixed;
@@ -157,24 +176,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-.heading_container {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    position: relative;
-    z-index: 1; /* Keep content on top of video */
-    background: linear-gradient(to right, #2825ec, #6838ec); /* Original gradient */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  
-}
-
-.heading_container.light-mode {
-    background: linear-gradient(to right, #2825ec, #6838ec); /* Original gradient */
-}
-
-.heading_container.dark-mode {
-    background: linear-gradient(to right, #c2c2c2, #5c5b5b); /* Example dark gradient */
-}
-
 .dashboard_title {
     text-align: center;
     font-size: 70px;
@@ -218,15 +219,14 @@ button img {
 }
 
 .home_btn img, .setting_btn img {
-    filter: brightness(0) invert(1); /* Default to white */
+    filter: var(--image-filter-value); /* Default to white */
 }
 
 body.dark-mode {
     background-color: white; /* Set background to white */
 }
 
-body.dark-mode .dashboard_title,
-body.dark-mode .home_btn img,
-body.dark-mode .setting_btn img {
-    filter: brightness(0) invert(0); /* Change all gadgets to black */
+body.dark-mode .dashboard_title {
+    filter: brightness(0) invert(0);
+    text-shadow: none; /* Change all gadgets to black */
 }
