@@ -77,14 +77,14 @@ body {
 .circle.chart-1{
     background-image: conic-gradient(
         rgb(12, 157, 235) 0% 20%,
-        rgb(31, 56, 181) 20% 100%
+        rgb(202, 106, 16) 20% 100%
     )
 }
 
 .circle.chart-2{
     background-image: conic-gradient(
-        rgb(25, 209, 157) 0% 38.4%,
-        rgb(21, 77, 61) 38.4% 100%
+        rgb(209, 25, 25) 0% 38.4%,
+        rgb(8, 219, 43) 38.4% 100%
     )
 }
 
@@ -245,8 +245,8 @@ body {
 .pillar-chart .pillar {
     width: var(--single-pillar-width);
     height: 0;
-    background-color: #3498db;
-    color: black;
+    background-color: #7600ed;
+    color: rgb(255, 0, 0);
     text-align: center;
     margin-top: auto;
     transition: 0.9s;
