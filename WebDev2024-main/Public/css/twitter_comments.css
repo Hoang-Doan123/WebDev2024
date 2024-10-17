@@ -225,46 +225,6 @@ body {
     top: 10px;
 }
 
-.line-1 {
-    top: 25px;
-}
-
-.line-2 {
-    top: 75px;
-}
-
-.line-3 {
-    top: 125px;
-}
-
-.line-4 {
-    top: 175px;
-}
-
-.line-5 {
-    top: 225px;
-}
-
-.line-6 {
-    top: 275px;
-}
-
-.value-1 {
-    top: 67px;
-}
-
-.value-2 {
-    top: 117px;
-}
-
-.value-3 {
-    top: 167px;
-}
-
-.value-4 {
-    top: 217px;
-}
-
 .pillar-chart .pillar {
     width: var(--single-pillar-width);
     height: 0;
@@ -319,58 +279,6 @@ body {
 
 .pillar-group.active {
     visibility: visible;
-}
-
-.pillar-chart.char-1 .text-1 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 0);
-}
-
-.pillar-chart.char-1 .text-2 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 1);
-}
-
-.pillar-chart.char-1 .text-3 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 2);
-}
-
-.pillar-chart.char-1 .text-4 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 3);
-}
-
-.pillar-chart.char-1 .text-5 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 4);
-}
-
-.pillar-chart.char-1 .text-6 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 5);
-}
-
-.pillar-chart.char-1 .text-7 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 6);
-}
-
-.pillar-chart.char-2 .text-1 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 0);
-}
-
-.pillar-chart.char-2 .text-2 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 1);
-}
-
-.pillar-chart.char-2 .text-3 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 2);
-}
-
-.pillar-chart.char-2 .text-4 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 3);
-}
-
-.pillar-chart.char-2 .text-5 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 4);
-}
-
-.pillar-chart.char-2 .text-6 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 5);
 }
 
 @keyframes rotateAppear {

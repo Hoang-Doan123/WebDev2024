@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main setting</title>
+    <link rel="stylesheet" href="Public/css/settingstyle.css">
+    <script defer src="./Public/js/setting.js"></script>
+</head>
+<body>
+    <video autoplay muted loop class="background-video" id="backgroundVideo">
+        <source src="videos/white_tech.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="heading-container">
+        <div class="home_btn">
+            <img src="Public/Images/home_icon.png" height="20px"> <!-- Adjust height as needed -->
+        </div>
+
+        <h1>Settings</h1>
+
+        <button class="icon-button" id="choicesButton" height="20px">
+            choices
+        </button>
+    </div>
+
+    <script>
+        document.querySelector('.home_btn').addEventListener('click', function() {
+            window.location.href = 'main_interface.html';
+        });
+    </script>
+
+    <div class="setting-box">
+        <div class="mode-setting-box">
+            <h3>Mode Settings</h3>
+            <div class="section">
+                <h4>Font Level</h4>
+                <div class="font-change">
+                    <button id="decrease-btn"><h1>-</h1></button>
+                    <h3 id="font-size-value">50</h3>
+                    <button id="increase-btn"><h1>+</h1></button>
+                </div>
+            </div>
+            <div class="section">
+                <label for="language-select"><h4>Language</h4></label>
+                <select id="language-select">
+                    <option value="1">English</option>
+                    <option value="2">French</option>
+                    <option value="3">Vietnamese</option>
+                </select>
+            </div>
+            <div class="section">
+                <h4>Animation</h4>
+                <label class="switch">
+                    <input type="checkbox" id="backgroundToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="section">
+                <h4>Help</h4>
+                <button>See Help</button>
+            </div>
+        </div>
+        <div class="settings-container">
+            <p class="setting-heading">Main settings</p>
+            <div class="profile-section">
+                <img src="Public/Images/mrToLam.jpg" alt="Profile" class="profile-img">
+                <div class="profile-info">
+                    <div class="profile-sector profile-name">
+                        <p class="profile-name-tag">Name:</p>
+                        <p class="profile-name-value">I don't know</p>
+                    </div>
+                    <div class="profile-sector profile-email">
+                        <p class="profile-email-tag">Email:</p>
+                        <p class="profile-email-value">I don't know</p>
+                    </div>
+                    <div class="profile-sector profile-phone">
+                        <p class="profile-phone-tag">Phone:</p>
+                        <p class="profile-phone-value">00000000</p>
+                    </div>
+                    <div class="profile-sector profile-address">
+                        <p class="profile-address-tag">Address:</p>
+                        <p class="profile-address-value">I don't know</p>
+                    </div>
+                    <a href="#" class="logout-btn">Log out</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="camera">
+                    <button class="camera-btn">Camera</button>
+                    <p class="camera-btn-description">Change avatar image</p>
+                </div>
+                <div class="premium">
+                    <button class="premium-btn">Premium</button>
+                    <p class="premium-btn-description">Pay 2$ a month</p>
+                </div>
+                <div class="connect">
+                    <button class="connect-btn">Connect</button>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>

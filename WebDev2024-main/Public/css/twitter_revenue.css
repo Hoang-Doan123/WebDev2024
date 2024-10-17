@@ -260,6 +260,15 @@ body {
     visibility: visible;
 }
 
+@keyframes upAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes rotateAppear {
     0% {
         opacity: 0;
