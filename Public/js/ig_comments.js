@@ -1,20 +1,20 @@
 const percentageCommentsDataSet = [
-    0.5490,
+    0.9490,
     0.6276,
     0.4238,
     0.7414,
-    0.8462,
+    0.1462,
     0.7348,
-    0.6932
+    0.5032
 ]
 
 const dataSets = [
-    {bigBar: 0.5443, smallBar: 0.0841},
-    {bigBar: 0.6525, smallBar: 0.0871},
-    {bigBar: 0.4324, smallBar: 0.0575},
-    {bigBar: 0.5253, smallBar: 0.0632},
+    {bigBar: 0.6443, smallBar: 0.3441},
+    {bigBar: 0.4525, smallBar: 0.1971},
+    {bigBar: 0.2324, smallBar: 0.0575},
+    {bigBar: 0.6253, smallBar: 0.2932},
     {bigBar: 0.5561, smallBar: 0.0521},
-    {bigBar: 0.6072, smallBar: 0.0754}
+    {bigBar: 0.1072, smallBar: 0.0754}
 ]
 
 window.onload = () => {

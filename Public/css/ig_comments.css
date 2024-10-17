@@ -99,32 +99,32 @@ body {
 
 .chart-1 {
     background-image: conic-gradient(
-        rgb(156, 45, 221) 0% 19%,
-        rgb(209, 8, 52) 19% 100%
+        rgb(242, 226, 3) 0% 19%,
+        rgb(0, 0, 234) 19% 100%
     )
 }
 
 .chart-2 {
     background-image: conic-gradient(
-        rgb(168, 131, 50) 0% 11%,
-        rgb(155, 233, 10) 11% 100%
+        rgb(196, 59, 14) 0% 11%,
+        rgb(0, 232, 236) 11% 100%
     )
 }
 
 .blue {
-    color: rgb(187, 66, 86);
+    color: rgb(242, 226, 3);
 }
 
 .cyan {
-    color: rgb(0, 100, 25);
+    color: rgb(0, 0, 234);
 }
 
 .dark-green {
-    color: rgb(194, 56, 14);
+    color: rgb(196, 59, 14);
 }
 
 .ocean {
-    color: rgb(187, 59, 144);
+    color: rgb(0, 232, 236);
 }
 
 .circle-chart-footer {
@@ -248,8 +248,8 @@ body {
 .pillar-chart .pillar {
     width: var(--single-pillar-width);
     height: 0;
-    background-color: #3498db;
-    color: crimson;
+    background-color: #0099ff;
+    color: rgb(255, 0, 51);
     text-align: center;
     margin-top: auto;
     transition: 0.9s;
@@ -289,11 +289,11 @@ body {
 }
 
 .pillar-big-data {
-    background-color: rgb(51, 153, 181);;
+    background-color: rgb(53, 41, 95);;
 }
 
 .pillar-small-data {
-    background-color: rgb(50, 168, 143);
+    background-color: rgb(49, 107, 95);
 }
 
 .pillar-group.active {

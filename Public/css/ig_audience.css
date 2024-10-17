@@ -14,7 +14,7 @@ body {
     --main-border-raidus: 10px;
     --circular-border-raidus: 50%;
     --main-box-shadow-color: rgb(166, 169, 173);
-    --main-border-color: conic-gradient(rgb(194, 6, 28), rgb(227, 47, 23), rgb(224, 119, 13), rgb(227, 216, 11));
+    --main-border-color: conic-gradient(rgb(194, 6, 28), rgb(30, 23, 227), rgb(5, 5, 5), rgb(11, 227, 11));
     --line-padding: 40px;
     --pillar-width: 50px;
     --pillar-gap: 16px;
@@ -109,12 +109,12 @@ body {
     padding: 0.5rem 1rem;
     margin: 0.5rem 1rem;
     background-image: conic-gradient(
-        rgb(196, 199, 32) 0% 12.4%,
-        rgb(235, 126, 16) 12.4% 29.7%,
-        rgb(230, 16, 30) 29.7% 50.4%,
-        rgb(217, 30, 211) 50.4% 76.2%,
-        rgb(148, 19, 235) 76.2% 91%,
-        rgb(62, 46, 130) 91% 100%
+        rgb(248, 252, 0) 0% 12.4%,
+        rgb(255, 128, 0) 12.4% 29.7%,
+        rgb(64, 0, 255) 29.7% 50.4%,
+        rgb(255, 0, 247) 50.4% 76.2%,
+        rgb(246, 0, 111) 76.2% 91%,
+        rgb(0, 0, 0) 91% 100%
     )
 }
 
