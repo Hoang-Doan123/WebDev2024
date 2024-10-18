@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    min-width: 450px;
-    font-family: 'Roboto', sans-serif;
-}
-
 :root {
     --main-border-raidus: 10px;
     --circular-border-raidus: 50%;
@@ -22,6 +16,22 @@ body {
     --inner-circle-diameter: 115px;
     --double-pillar-width: 60px;
     --double-pillar-gap: 24px;
+    --main-background: #ffffff;
+    --title-color: #000000;
+    --image-filter: brightness(0) invert(0);
+}
+
+.dark-mode {
+    --main-background: #000000;
+    --title-color: #ffffff;
+    --image-filter: brightness(0) invert(1);
+}
+
+body {
+    height: 100vh;
+    min-width: 450px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-background);
 }
 
 .navigation-bar-container {
@@ -48,6 +58,10 @@ body {
     height: 100%;
 }
 
+.back-arrow-button img, .setting_button_container img {
+    filter: var(--image-filter);
+}
+
 .like-analysis-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -57,6 +71,10 @@ body {
     margin: 10px 15px;
     box-shadow: 2px 4px 10px var(--main-box-shadow-color);
     border-radius: var(--main-border-raidus);
+}
+
+.line-analysis-header {
+    color: var(--title-color);
 }
 
 .line-analysis-main {
@@ -91,7 +109,8 @@ body {
 .circle-inner {
     width: var(--inner-circle-diameter);
     height: var(--inner-circle-diameter);
-    background-color: white;
+    background-color: var(--main-background);
+    color: var(--title-color);
     z-index: 1;
 }
 
@@ -110,6 +129,10 @@ body {
     border-radius: var(--main-border-raidus);
     box-shadow: 2px 4px 10px var(--main-box-shadow-color);
     gap: 10px;
+}
+
+.circle-chart-main h3 {
+    color: var(--title-color);
 }
 
 .circle, .circle-inner {
@@ -131,6 +154,10 @@ body {
     animation: upAppear 1.1s ease-in-out;
 }
 
+.color-description h3 {
+    color: var(--title-color)
+}
+
 .circle-chart-footer {
     display: grid;
     grid-template-columns: auto;
@@ -143,6 +170,10 @@ body {
 .pillar-analysis {
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.pillar-analysis-header {
+    color: var(--title-color);
 }
 
 .pillar-analysis-container {
@@ -164,7 +195,7 @@ body {
 
 .pillar-chart .vertical-line {
     position: absolute;
-    background-color: black;
+    background-color: gray;
     width: 2px;
     height: calc(100% - 48px);
     left: var(--line-padding);
@@ -181,72 +212,28 @@ body {
 
 .pillar-chart.char-1 .line-value {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: -9px;
 }
 
 .pillar-chart.char-2 .line-value {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: -5px;
 }
 
 .pillar-chart .unit {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: 0px;
     top: 10px;
-}
-
-.line-1 {
-    top: 25px;
-}
-
-.line-2 {
-    top: 75px;
-}
-
-.line-3 {
-    top: 125px;
-}
-
-.line-4 {
-    top: 175px;
-}
-
-.line-5 {
-    top: 225px;
-}
-
-.line-6 {
-    top: 275px;
-}
-
-.value-0 {
-    top: 17px;
-}
-
-.value-1 {
-    top: 67px;
-}
-
-.value-2 {
-    top: 117px;
-}
-
-.value-3 {
-    top: 167px;
-}
-
-.value-4 {
-    top: 217px;
 }
 
 .pillar-chart .pillar {
     width: var(--single-pillar-width);
     height: 0;
     background-color: #3498db;
-    color: crimson;
+    color: var(--main-background);
     text-align: center;
     margin-top: auto;
     transition: 0.9s;
@@ -263,6 +250,7 @@ body {
 .pillar-chart .text {
     position: absolute;
     bottom: 0px;
+    color: var(--title-color);
 }
 
 .pillar-group {
@@ -277,7 +265,7 @@ body {
 .double-pillar {
     width: var(--double-pillar-width);
     height: 0;
-    color: white;
+    color: var(--main-background);
     text-align: center;
     transition: height 0.9s ease;
     border: 1px solid rgb(13, 13, 13);
@@ -301,58 +289,6 @@ body {
     visibility: visible;
 }
 
-.pillar-chart.char-1 .text-1 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 0);
-}
-
-.pillar-chart.char-1 .text-2 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 1);
-}
-
-.pillar-chart.char-1 .text-3 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 2);
-}
-
-.pillar-chart.char-1 .text-4 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 3);
-}
-
-.pillar-chart.char-1 .text-5 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 4);
-}
-
-.pillar-chart.char-1 .text-6 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 5);
-}
-
-.pillar-chart.char-1 .text-7 {
-    left: calc(var(--line-padding) + 20px + (var(--single-pillar-gap) + var(--single-pillar-width)) * 6);
-}
-
-.pillar-chart.char-2 .text-1 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 0);
-}
-
-.pillar-chart.char-2 .text-2 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 1);
-}
-
-.pillar-chart.char-2 .text-3 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 2);
-}
-
-.pillar-chart.char-2 .text-4 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 3);
-}
-
-.pillar-chart.char-2 .text-5 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 4);
-}
-
-.pillar-chart.char-2 .text-6 {
-    left: calc(var(--line-padding) + 25px + (var(--double-pillar-gap) + var(--double-pillar-width)) * 5);
-}
-
 .pillar-analysis-footer {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -369,6 +305,10 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
+}
+
+.bar-chart-parameter-fragment .color-context {
+    color: var(--title-color)
 }
 
 @keyframes upAppear {
