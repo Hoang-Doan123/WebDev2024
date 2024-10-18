@@ -26,12 +26,6 @@
             <img src="Public/Images/setting_icon.png" height="20px"> <!-- Adjust height as needed -->
         </div>
     </div>
-    
-    <script>
-        document.getElementById('settingButton').addEventListener('click', function() {
-            window.location.href = 'mainsetting.html';
-        });
-    </script>
 
     <div class="dashboard_title">
         <p>SOCIAL MEDIA DASHBOARD</p>
@@ -56,52 +50,58 @@
         </div>
     </div>
 
-    <script>
-        const toggleSwitch = document.getElementById('backgroundToggle');
-        const backgroundVideo = document.getElementById('backgroundVideo');
-        const body = document.body;
-        const heading_container = document.querySelector('.heading_container');
-
-        // Store the original and new video sources
-        const originalVideoSrc = 'videos/dark.mp4';
-        const newVideoSrc = 'videos/white.mp4'; // Change this to your new video
-
-        const getTheme = localStorage.getItem("theme");
-        if (getTheme) {
-            if (getTheme === "dark-mode") {
-                body.classList.add("dark-mode")
-                toggleSwitch.checked = true;
-                backgroundVideo.src = newVideoSrc;
-            } else if (getTheme === "light-mode") {
-                if (body.classList.contains("dark-mode")) {
-                    body.classList.remove("dark-mode")
-                }
-                toggleSwitch.checked = false;
-                backgroundVideo.src = originalVideoSrc;
-            }
-        }
-
-        toggleSwitch.addEventListener('change', function() {
-            // Change the video source based on the toggle state
-            if (this.checked) {
-                backgroundVideo.src = newVideoSrc;
-                body.classList.add('dark-mode'); // Add class for dark mode
-                heading_container.classList.add('dark-mode'); // Change heading_container to dark mode
-                heading_container.classList.remove('light-mode'); // Ensure light mode class is removed
-                localStorage.setItem("theme", "dark-mode")
-            } else {
-                backgroundVideo.src = originalVideoSrc;
-                body.classList.remove('dark-mode'); // Remove class for dark mode
-                heading_container.classList.remove('dark-mode'); // Ensure dark mode class is removed
-                heading_container.classList.add('light-mode'); // Change heading_container back to light mode
-                localStorage.setItem("theme", "light-mode")
-            }
-            // Load the new video
-            backgroundVideo.load();
-            // Restart the video
-            backgroundVideo.play();
-        });
-    </script>
-    
+    <footer>
+        <div class="footing_credit">
+            <h2>Social Media Dashboard by Group 5</h2>
+            <p>Customer Support: support@yourcompany.com </p>
+            <p>Company Registration Number: XXXXXXX</p>
+            <p>© YourCompany 2024. All rights reserved.</p>
+        </div>
+        <div class="footing_container">
+            <div>
+                <h3>Dashboard Services:</h3>
+                <ul>
+                    <li>Social Media Analytics</li>
+                    <li>Follower Growth Tracking</li>
+                    <li>Likes, Comments, Shares</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Integrations</h3>
+                <ul>
+                    <li>Facebook Metrics</li>
+                    <li>Instagram Analytics</li>
+                    <li>Twitter Activity</li>
+                    <li>YouTube Insights</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Account Utilities</h3>
+                <ul>
+                    <li>Track Follower Growth</li>
+                    <li>Export Data Reports</li>
+                    <li>Compare Engagement Rates</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Payment and Subscription</h3>
+                <ul>
+                    <li>Upgrade Your Account</li>
+                    <li>Payment Methods (Credit Card, PayPal)</li>
+                    <li>Free Trial Options</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h3>Terms & Conditions:</h3>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Data Usage Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Customer Support and FAQ</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
