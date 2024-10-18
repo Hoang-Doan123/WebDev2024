@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View for Facebook</title>
+    <link rel="icon" href="Public/Images/facebook/facebook_icon.png">
+    <link rel="stylesheet" href="Public/css/facebook_style.css" type="text/css">
+    <script defer src="Public/js/facebook.js"></script>
+    <script defer src="Public/js/facebook_2.js" type="module"></script>
+</head>
+<body>
+    <div class="navigation-bar-container">
+        <div class="back-arrow-button" id="back-button">
+            <img src="Public/Images/Media/backArrow.png">
+        </div>
+        <div class="fb-logo-container">
+            <img src="Public/Images/facebook/facebook_icon.png">
+        </div>
+        <div class="setting_button_container">
+            <img src="Public/Images/setting_icon.png" height="30px">
+        </div>
+    </div>
+    <hr />
+    <div class="facebook-analysis-container">
+        <!-- The fragment which contains the table which shows the overall analysis -->
+        <div class="interaction-analytics">
+            <div class="interaction-analytics-header">
+                <h2>Overall data this week</h2>
+            </div>
+            <div class="interaction-analytics-body">
+                <!-- Analysis for reacts -->
+                <div class="likes-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/reacts.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Reacts</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>420</h1>
+                        </div>
+                        <div class="change">
+                            <h5>3%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for reposts -->
+                <div class="reposts-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/share.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Shares</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>50</h1>
+                        </div>
+                        <div class="change">
+                            <h5>6%</h5>
+                            <img src="Public/Images/Media/DownArrow.png" alt="" class="decrease-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for comments -->
+                <div class="comments-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/comment.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Comments</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>68</h1>
+                        </div>
+                        <div class="change">
+                            <h5>2%</h5>
+                            <img src="Public/Images/Media/DownArrow.png" alt="" class="decrease-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for audiences -->
+                <div class="audience-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/page.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Page Likes</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>145</h1>
+                        </div>
+                        <div class="change">
+                            <h5>7%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for new followers -->
+                <div class="new-followers-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/Media/NewFollowers.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Followers</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>79</h1>
+                        </div>
+                        <div class="change">
+                            <h5>3%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+                <!-- Analysis for revenue -->
+                <div class="revenue-container interaction-analytics-box">
+                    <div class="box-header">
+                        <div class="icon-container">
+                            <img src="Public/Images/facebook/messenger.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Messages</h3>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="number">
+                            <h1>200</h1>
+                        </div>
+                        <div class="change">
+                            <h5>5%</h5>
+                            <img src="Public/Images/Media/UpArrow.png" alt="" class="increase-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The fragment which contains circle chart-->
+        <div class="circle-analysis-container">
+            <div class="circle-analysis-main">
+                <div class="circle-analysis-header">
+                    <h3>Engagement Habits</h3>
+                </div>
+                <div class="circle-analysis-content">
+                    <div class="circle-chart-container">
+                        <div class="circle chart-1">
+                            <div class="circle-inner">
+                                <h4>Total: 854</h4>
+                            </div>
+                        </div>
+                        <div class="circle-chart-footer">
+                            <p class="chart-footer-text">August</p>
+                        </div>
+                    </div>
+                    <div class="circle-chart-container">
+                        <div class="circle chart-2">
+                            <div class="circle-inner">
+                                <h4>Total: 967</h4>
+                            </div>
+                        </div>
+                        <div class="circle-chart-footer">
+                            <p class="chart-footer-text">September</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-analysis-footer">
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation lime"></div>
+                    <div class="color-description">
+                        <p class="color-text">Plain text</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation green"></div>
+                    <div class="color-description">
+                        <p class="color-text">Photo links</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation blue"></div>
+                    <div class="color-description">
+                        <p class="color-text">Page links</p>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-representation cyan"></div>
+                    <div class="color-description">
+                        <p class="color-text">Video links</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The fragment which contains the linear chart (incomplete) -->
+        <div class="line-analysis-container">
+            <div class="line-analysis-main">
+                <h3 class="line-analysis-header">Interactions</h3>
+                <canvas id="line-chart" width="500" height="220"></canvas>
+            </div>
+            <div class="line-analysis-footer">
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation light-blue"></div>
+                    <div class="color-description">
+                        <p class="color-text">Shares</p>
+                    </div>
+                </div>
+                <div class="line-chart-parameter-fragment">
+                    <div class="color-representation tomato"></div>
+                    <div class="color-description">
+                        <p class="color-text">Reacts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pillar-analysis-container">
+            <div class="pillar-analysis-header">
+                <h2>Number of messages</h2>
+            </div>
+            <div class="pillar-chart-container">
+                <div class="vertical-line"></div>
+                <div class="line-separation line-1"></div>
+                <div class="line-separation line-2"></div>
+                <div class="line-separation line-3"></div>
+                <div class="line-separation line-4"></div>
+                <div class="line-separation line-5"></div>
+                <div class="line-separation line-6"></div>
+                <div class="line-separation line-7"></div>
+                <div class="line-value value-1">40</div>
+                <div class="line-value value-2">30</div>
+                <div class="line-value value-3">20</div>
+                <div class="line-value value-4">10</div>
+                <div class="unit">
+                    <h2></h2>
+                </div>
+                <div class="pillar pillar-1">10</div>
+                <div class="pillar pillar-2">15</div>
+                <div class="pillar pillar-3">27</div>
+                <div class="pillar pillar-4">40</div>
+                <div class="pillar pillar-5">11</div>
+                <div class="pillar pillar-6">6</div>
+                <div class="pillar pillar-7">14</div>
+                <div class="text text-1">Mon</div>
+                <div class="text text-2">Tue</div>
+                <div class="text text-3">Wed</div>
+                <div class="text text-4">Thu</div>
+                <div class="text text-5">Fri</div>
+                <div class="text text-6">Sat</div>
+                <div class="text text-7">Sun</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

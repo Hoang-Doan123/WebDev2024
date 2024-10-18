@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Audience</title>
+    <link rel="stylesheet" href="Public/css/facebook_audience.css">
+    <link rel="icon" href="Public/Images/facebook/facebook_icon.png">
+    <script defer src="Public/js/pageFunction.js"></script>
+    <script defer src="Public/js/facebook_audience.js" type="module"></script>
+</head>
+<body>
+    <div class="navigation-bar-container">
+        <div class="back-arrow-button" id="facebook-back-button">
+            <img src="Public/Images/Media/backArrow.png">
+        </div>
+        <div class="fb-logo-container">
+            <img src="Public/Images/facebook/facebook_icon.png">
+        </div>
+        <div class="setting_button_container">
+            <img src="Public/Images/setting_icon.png" height="30px">
+        </div>
+    </div>
+    <div class="line-analysis-chart">
+        <div class="line-analysis-main">
+            <h3 class="line-analysis-header">Total New Followers Gained</h3>
+            <canvas id="line-chart" width="500" height="220"></canvas>
+        </div>
+        <div class="line-analysis-side">
+            <div class="overall-box">
+                <h1 style="color: green">7</h1>
+                <h4>Followers Gained</h4>
+            </div>
+            <div class="overall-box">
+                <h1 style="color: red">2</h1>
+                <h4>Followers Lost</h4>
+            </div>
+            <div class="overall-box">
+                <h1 style="color: blue">145</h1>
+                <h4>Visited Audience</h4>
+            </div>
+            <div class="overall-box">
+                <h1 style="color: rgb(64, 108, 163)">5</h1>
+                <h4>New Page Likes</h4>
+            </div>
+        </div>
+    </div>
+    <div class="body-bottom">
+        <div class="line-analysis-chart">
+            <div class="line-analysis-main">
+                <h3 class="line-analysis-header">Number Of Visited Audience</h3>
+                <canvas id="line-chart-2" width="500" height="220"></canvas>
+            </div>
+        </div>
+        <div class="circle-chart-container">
+            <div class="circle-chart-main">
+                <h3>Religion Based Audience</h3>
+                <div class="circle">
+                    <div class="circle-inner">
+                        <h3>Total: 145</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-chart-footer">
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(196, 199, 32)">12.4%</h1>
+                        <h3>Asia</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(235, 126, 16)">17.3%</h1>
+                        <h3>N. America</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(230, 16, 30)">20,7%</h1>
+                        <h3>S. America</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(217, 30, 211)">25,8%</h1>
+                        <h3>Europe</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(148, 19, 235)">14,8%</h1>
+                        <h3>Australia</h3>
+                    </div>
+                </div>
+                <div class="circle-chart-parameter-fragment">
+                    <div class="color-description">
+                        <h1 style="color: rgb(62, 46, 130)">9%</h1>
+                        <h3>Others</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
