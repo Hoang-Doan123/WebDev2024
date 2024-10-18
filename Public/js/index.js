@@ -24,7 +24,6 @@ const TEXT_EXTRA_SPACE = 11
  * @params {string} letters: the number sometimes can be too long, so the letters represent the number usual units (like K (thousand), M (million), etc.).
  * @params {Array<Array<number>>} dataPoints: the points where the line goes.
 */
-
 class DrawLineChart {
     constructor(
         ctx, 
@@ -34,6 +33,7 @@ class DrawLineChart {
         lineStrokeStyles,
         labels,
         letters,
+        theme,
         ...dataPoints
     ) {
         const len = [
@@ -55,6 +55,7 @@ class DrawLineChart {
         this.lineStrokeStyles = lineStrokeStyles;
         this.labels = labels
         this.letters = letters
+        this.theme = theme;
         this.LINE_CHART_HEIGHT = LINE_CHART_HEIGHT
         this.LINE_CHART_WIDTH = LINE_CHART_WIDTH
         this.START_X = START_X
@@ -76,6 +77,7 @@ class DrawLineChart {
             this.LINE_CHART_HEIGHT
         );
         this.isMultipleUnits && this.ctx.lineTo(this.LINE_CHART_WIDTH + this.START_X, 0) // Bottom right
+        this.ctx.strokeStyle = this.theme === 'dark-mode' ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)"
         this.ctx.stroke();
 
         this.ctx.beginPath()
@@ -98,7 +100,7 @@ class DrawLineChart {
 
         for (let j = 0; j < this.labels.length; j++) {
             this.ctx.font = "10px Arial"
-            this.ctx.fillStyle = 'rgb(0, 0, 0)'
+            this.ctx.fillStyle = this.theme === "dark-mode" ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)"
             this.ctx.fillText(
                 this.labels[j], 
                 this.START_X - 10 + j * this.LINE_LENGTH * this.INFO_SPACE, 
@@ -113,7 +115,6 @@ class DrawLineChart {
             const getPointsInIndex = this.dataPoints.map(data => {
                 return data[i]
             })
-            console.log(this.LINE_CHART_HEIGHT - Math.max(...getPointsInIndex))
             this.ctx.moveTo(
                 this.START_X + i * this.LINE_LENGTH, 
                 this.LINE_CHART_HEIGHT)
