@@ -336,6 +336,13 @@ input:checked + .slider:before {
     text-align: center;
     border-radius: 10px;
     margin-left: 10px;
+    width: 100px; /* Set a fixed width for the buttons */
+    height: 100px; /* Set a fixed height for the buttons */
+}
+
+.button_settings img {
+    width: 100%; /* Make image fill the button width */
+    height: 100%; /* Make image fill the button height */
 }
 
 .button_settings .first_row, .second_row, .third_row {
@@ -343,6 +350,7 @@ input:checked + .slider:before {
     justify-content: space-around;
     margin-bottom: 10px;
 }
+
 
 /* Container for the cards */
 .change-and-choose-dashboard {
