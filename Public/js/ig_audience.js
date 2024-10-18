@@ -1,24 +1,39 @@
-const backButton = document.getElementById("ig-back-button")
+import DrawLineChart, {
+    randomNumberArray,
+    START_X,
+} from "./index.js"
 
-backButton.addEventListener("click", () => {
-    window.location.href = "./main_interface.html"
-})
+const canvas = document.getElementById("line-chart")
 
-const routes = ['facebook_interactions', 'facebook_interactions', 'facebook_comments', 'facebook_audience', 'facebook_audience', 'facebook_messages']
+const ctx = canvas.getContext('2d');
 
-const dataTitles = document.querySelectorAll(".title")
-for (let i = 0; i < dataTitles.length; i++) {
-    dataTitles[i].addEventListener("click", () => {
-        window.location.href = `./${routes[i]}.html`
-    })
-}
+const dlc = new DrawLineChart(
+    ctx,
+    ["Followers"],
+    [2000],
+    [START_X - 30],
+    ['rgb(75, 192, 192)'],
+    ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept'],
+    "",
+    localStorage.getItem("theme") === "dark-mode" ? "dark-mode" : "light-mode",
+    [...randomNumberArray(32, 60, 160), 158]
+)
 
-document.querySelector(".line-analysis-header").addEventListener("click", () => {
-    window.location.href = "./facebook_interactions.html"
-})
+dlc.draw()
 
-window.onload = () => {
-    document.querySelectorAll(".pillar").forEach(q => {
-        q.classList.add("active")
-    })
-}
+const canvas2 = document.getElementById("line-chart-2")
+const ctx2 = canvas2.getContext("2d")
+
+const dlc2 = new DrawLineChart(
+    ctx2,
+    ["Audiences"],
+    [50],
+    [START_X - 30],
+    ["rgb(75, 192, 192)"],
+    ["May", "Jun", "Jul", "Aug", "Sep"],
+    "M",
+    localStorage.getItem("theme") === "dark-mode" ? "dark-mode" : "light-mode",
+    [...randomNumberArray(16, 50, 150), 117]
+)
+
+dlc2.draw()

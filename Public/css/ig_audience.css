@@ -36,12 +36,14 @@ body {
     cursor: pointer;
 }
 
-.fb-logo-container {
+
+.ig-logo-container {
     max-width: 50px;
     max-height: 50px;
 }
 
-.back-arrow-button img, .setting_button_container img, .fb-logo-container img {
+
+.back-arrow-button img, .setting_button_container img, .ig-logo-container img {
     width: 100%;
     height: 100%;
 }
