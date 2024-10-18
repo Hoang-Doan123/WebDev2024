@@ -8,6 +8,8 @@ body {
     height: 100vh;
     min-width: 600px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--main-background);
+    color: var(--title-color);
 }
 
 :root {
@@ -22,6 +24,17 @@ body {
     --double-pillar-width: 60px;
     --single-pillar-gap: 16px;
     --double-pillar-gap: 24px;
+    --main-background: #ffffff; 
+    --title-color: #000000; 
+}
+
+.dark-mode {
+    --main-background: #000000; 
+    --title-color: #ffffff; 
+}
+
+.dark-mode img {
+    filter: invert(1);
 }
 
 .navigation-bar-container {

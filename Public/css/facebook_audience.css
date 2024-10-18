@@ -8,6 +8,8 @@ body {
     height: 100vh;
     min-width: 450px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--main-background);
+    color: var(--title-color);
 }
 
 :root {
@@ -20,6 +22,17 @@ body {
     --pillar-gap: 16px;
     --outer-circle-diameter: 190px;
     --inner-circle-diameter: 130px;
+    --main-background: #ffffff; 
+    --title-color: #000000; 
+}
+
+.dark-mode {
+    --main-background: #000000; 
+    --title-color: #ffffff; 
+}
+
+.dark-mode img {
+    filter: invert(1);
 }
 
 .navigation-bar-container {
