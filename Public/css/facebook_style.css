@@ -18,6 +18,7 @@ body {
     --line-padding: 40px;
     --pillar-width: 50px;
     --pillar-gap: 16px;
+    --pillar-general: 50;
     --pillar-1: 10;
     --pillar-2: 15;
     --pillar-3: 27;
@@ -449,31 +450,31 @@ body {
 }
 
 .pillar.pillar-1.active {
-    height: calc(250px * var(--pillar-1) / 50);
+    height: calc(250px * var(--pillar-1) / var(--pillar-general));
 }
 
 .pillar.pillar-2.active {
-    height: calc(250px * var(--pillar-2) / 50);
+    height: calc(250px * var(--pillar-2) / var(--pillar-general));
 }
 
 .pillar.pillar-3.active {
-    height: calc(250px * var(--pillar-3) / 50);
+    height: calc(250px * var(--pillar-3) / var(--pillar-general));
 }
 
 .pillar.pillar-4.active {
-    height: calc(250px * var(--pillar-4) / 50);
+    height: calc(250px * var(--pillar-4) / var(--pillar-general));
 }
 
 .pillar.pillar-5.active {
-    height: calc(250px * var(--pillar-5) / 50);
+    height: calc(250px * var(--pillar-5) / var(--pillar-general));
 }
 
 .pillar.pillar-6.active {
-    height: calc(250px * var(--pillar-6) / 50);
+    height: calc(250px * var(--pillar-6) / var(--pillar-general));
 }
 
 .pillar.pillar-7.active {
-    height: calc(250px * var(--pillar-7) / 50);
+    height: calc(250px * var(--pillar-7) / var(--pillar-general));
 }
 
 .pillar-chart-container .text {

@@ -22,7 +22,7 @@
             <input type="checkbox" id="backgroundToggle">
             <span class="slider"></span>
         </label>
-        <div class="setting_btn">
+        <div class="setting_btn" id="settingButton">
             <img src="Public/Images/setting_icon.png" height="20px"> <!-- Adjust height as needed -->
         </div>
     </div>
@@ -50,53 +50,20 @@
         </div>
     </div>
 
-    <script>
-        const toggleSwitch = document.getElementById('backgroundToggle');
-        const backgroundVideo = document.getElementById('backgroundVideo');
-        const body = document.body;
-        const heading_container = document.querySelector('.heading_container');
-    
-
-        // Store the original and new video sources
-        const originalVideoSrc = 'videos/dark.mp4';
-        const newVideoSrc = 'videos/white.mp4'; // Change this to your new video
-
-        toggleSwitch.addEventListener('change', function() {
-            // Change the video source based on the toggle state
-            if (this.checked) {
-                backgroundVideo.src = newVideoSrc;
-                body.classList.add('dark-mode'); // Add class for dark mode
-                heading_container.classList.add('dark-mode'); // Change heading_container to dark mode
-                heading_container.classList.remove('light-mode'); // Ensure light mode class is removed
-            } else {
-                backgroundVideo.src = originalVideoSrc;
-                body.classList.remove('dark-mode'); // Remove class for dark mode
-                heading_container.classList.remove('dark-mode'); // Ensure dark mode class is removed
-                heading_container.classList.add('light-mode'); // Change heading_container back to light mode
-            }
-            // Load the new video
-            backgroundVideo.load();
-            // Restart the video
-            backgroundVideo.play();
-        });
-    </script>
-
     <footer>
-        <div style="text-align: center;">
-            <h2>Social Media Dashboard for Digital Insights and Growth Management..</h2>
+        <div class="footing_credit">
+            <h2>Social Media Dashboard by Group 5</h2>
             <p>Customer Support: support@yourcompany.com </p>
-            <p>© YourCompany 2024. All rights reserved..</p>
             <p>Company Registration Number: XXXXXXX</p>
+            <p>© YourCompany 2024. All rights reserved.</p>
         </div>
-        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+        <div class="footing_container">
             <div>
                 <h3>Dashboard Services:</h3>
                 <ul>
                     <li>Social Media Analytics</li>
                     <li>Follower Growth Tracking</li>
-                    <li>Engagement Metrics (Likes, Comments, Shares)</li>
-                    <li>Post Performance Monitoring/<li>
-                   
+                    <li>Likes, Comments, Shares</li>
                 </ul>
             </div>
             <div>
@@ -106,11 +73,10 @@
                     <li>Instagram Analytics</li>
                     <li>Twitter Activity</li>
                     <li>YouTube Insights</li>
-                    
                 </ul>
             </div>
             <div>
-                <h3>Account Utilities:</h3>
+                <h3>Account Utilities</h3>
                 <ul>
                     <li>Track Follower Growth</li>
                     <li>Export Data Reports</li>
@@ -118,14 +84,11 @@
                 </ul>
             </div>
             <div>
-                <h3>Payment and Subscription::</h3>
+                <h3>Payment and Subscription</h3>
                 <ul>
                     <li>Upgrade Your Account</li>
-                    <li>Manage Subscription Plans</li>
                     <li>Payment Methods (Credit Card, PayPal)</li>
-                    <li>View Billing History</li>
                     <li>Free Trial Options</li>
-                    
                 </ul>
             </div>
             <div>
@@ -134,13 +97,10 @@
                     <li>Privacy Policy</li>
                     <li>Data Usage Policy</li>
                     <li>Terms of Service</li>
-                    <li>API Access Guidelines</li>
                     <li>Customer Support and FAQ</li>
-                    
                 </ul>
             </div>
         </div>
     </footer>
 </body>
 </html>
-

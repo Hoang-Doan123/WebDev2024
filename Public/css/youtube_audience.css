@@ -24,6 +24,7 @@ body {
 
 .navigation-bar-container {
     display: flex;
+    background-color: #ff0000;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
