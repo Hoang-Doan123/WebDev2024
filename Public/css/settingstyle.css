@@ -292,41 +292,22 @@ input:checked + .slider:before {
 .subscribe_card,
 .revenue_card,
 .follower_card,
-.impression_card,
+.pagelike_card,
 .message_card,
 .react_card {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
     text-align: center;
-    line-height: 100px; /* Center text vertically */
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: background-color 0.3s;
-}
-
-
-.like_card,
-.share_card,
-.comment_card,
-.subscribe_card,
-.revenue_card,
-.follower_card,
-.impression_card,
-.message_card,
-.react_card p {
-    color: black;
-    text-align: center;
-    vertical-align: middle;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 
 .button_settings .first_row, .second_row, .third_row {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .change-dashboard-section {
@@ -399,11 +380,6 @@ input:checked + .slider:before {
     z-index: 1; /* Keep content on top of video */
 }
 
-.cards_container p {
-    font-size: 18px;
-    font-weight: bold;
-}
-
 /* Make sure every card has the same size and style */
 .facebook_card,
 .instagram_card,
@@ -415,10 +391,11 @@ input:checked + .slider:before {
     background-color: #fff;
     text-align: center;
     border-radius: 10px;
+    margin-left: 10px;
 }
 
 .first_row, .second_row {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
