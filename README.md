@@ -3,7 +3,7 @@ Group Info
 * Group ID: *5*
 * Project Name: *Social Media Dashboard*
 
-Members:
+Members
 ==============================
 |ID|Name|
 |-|-|

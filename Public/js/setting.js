@@ -21,3 +21,7 @@ if (theme) {
         backgroundVideo.src = lightBackground
     }
 }
+
+function showYourChoice() {
+    document.querySelector('.your-choice-section').style.display = 'block';
+}

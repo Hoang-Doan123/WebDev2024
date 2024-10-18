@@ -36,12 +36,12 @@ body, html {
     display: flex;
     justify-content: space-between;  /* Place items on the left, center, and right */
     align-items: center;             /* Vertically center items */
-    padding: 30px 60px;                /* Adjust height as needed */
+    padding: 30px 60px;             
     background: var(--heading-background);
     height: 105px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  
-    width: 100%;                     /* Make container stretch full width */
-    box-sizing: border-box;           /* Include padding in element's width */
+    width: 100%;                     
+    box-sizing: border-box;          /* Include padding in element's width */
 }
 .button-container {
     display: flex; 
@@ -60,6 +60,7 @@ body, html {
     background: var(--home-btn-background); 
     padding: 10px; /* Set padding for the button */
     border-radius: 10px; 
+    border: 2px solid black;
     margin: 0 10px; 
     transition: background 0.33s; 
 }
@@ -78,30 +79,33 @@ body, html {
     transform: scale(1.15); 
 }
 
-/* Main content area - centered on the screen */
-/* body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;                   /* Full viewport height */
-    /* padding-top: 120px;              /* Add padding to prevent overlap with the heading */
-    /* box-sizing: border-box; */
-/*} */
+.icon-button {
+    display: grid;
+    grid-template-columns: 90px auto;
+    border: 2px solid black;
+}
 
+.icon-button p {
+    font-weight: bold;
+}
 .setting-box {
     display: flex;
-    justify-content: start;
+    justify-content: center;       
+    align-items: flex-start;         
+    margin: 20px auto;              
+    max-width: 1200px;              
+    width: 100%;                     
 }
 
 /* Settings container - centered */
 .settings-container {
     margin: 20px;
     background-color: #fff;
-    width: 250px;
+    width: 250px;                   
     height: fit-content;
     padding: 20px;
     border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -121,8 +125,8 @@ body, html {
 }
 
 .profile-img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 110px;
     border-radius: 0;
     margin-right: 20px;
 }
@@ -143,6 +147,7 @@ body, html {
 .profile-info .profile-sector .profile-email-tag,
 .profile-info .profile-sector .profile-phone-tag,
 .profile-info .profile-sector .profile-address-tag {
+    font-weight: bold;
     margin-right: 10px; /* Add space between tag and value */
 }
 
@@ -176,6 +181,7 @@ body, html {
     flex-direction: column; 
     align-items: center;
     padding: 20px;
+    font-weight: bold;
 }
 
 .buttons button {
@@ -217,12 +223,12 @@ body, html {
 .mode-setting-box {
     margin: 20px;
     padding: 15px;
-    border-radius: 20px;
-    border: 1px solid #000000;
+    border-radius: 10px;
+    border: 2px solid black;
     width: 100%;
     max-width: 250px;
     height: 300px;
-    background-color: #cac6ec;
+    background-color: white;
 }
 /* Settings heading */
 .mode-setting-box .mode-setting-heading {
@@ -248,11 +254,11 @@ body, html {
     height: 35px;      /* Button size */
     border-radius: 50px;       /* Rounded corners */
     font-size: 16px;           /* Font size */
-    cursor: pointer;
+    cursor: pointer;           /* Pointer on hover */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;         /* Pointer on hover */
+    margin: 0 5px;         
 }
 #language-select {
     appearance: none;  /* Removes the default arrow in most browsers */
@@ -312,6 +318,9 @@ input:checked + .slider:before {
     align-items: center;
     margin-top: 30px;
     position: relative;
+    width: 100%;                   
+    max-width: 1200px;            
+    margin: 30px auto;            
 }
 
 .button_settings p {
@@ -338,6 +347,7 @@ input:checked + .slider:before {
     margin-left: 10px;
     width: 100px; /* Set a fixed width for the buttons */
     height: 100px; /* Set a fixed height for the buttons */
+    cursor: pointer;
 }
 
 .button_settings img {
@@ -348,6 +358,7 @@ input:checked + .slider:before {
 .button_settings .first_row, .second_row, .third_row {
     display: flex;
     justify-content: space-around;
+    padding: 15px;
     margin-bottom: 10px;
 }
 
@@ -362,18 +373,18 @@ input:checked + .slider:before {
 
 .change-dashboard-section,
 .your-choice-section {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     background-color: white;
     text-align: center;
     margin: 20px; 
-    padding: 20px; 
-}
-
-.change-dashboard-section,
-.your-choice-section {
+    padding: 20px;
     width: 400px; 
     height: 150px; 
+}
+
+.your-choice-section {
+    display: none;
 }
 
 .change-dashboard-section p,
@@ -382,26 +393,39 @@ input:checked + .slider:before {
     font-weight: bold;
 }
 
-.change-dashboard-section .media-btn,
-.your-choice-section .media-btn {
+.change-dashboard-section .media-btn {
     display: flex;
     justify-content: center; 
     gap: 40px;
 }
 
-.change-dashboard-section .media-btn img,
-.your-choice-section .media-btn img {
+.change-dashboard-section .media-btn img {
     height: 70px;
+    cursor: pointer;
+    margin-bottom: 30px; 
+}
+
+.your-choice-section .media-btn {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
     cursor: pointer;
 }
 
-.change-dashboard-section .media-btn img {
-    margin-bottom: 30px; 
+.your-choice-section .media-btn .fb_icon img {
+    height: 90px; 
 }
 
-.your-choice-section .media-btn img {
-    margin-top: 30px; 
-    margin-bottom: 30px; 
+.your-choice-section .media-btn .ins_icon img {
+    height: 90px; 
+}
+
+.your-choice-section .media-btn .ytb_icon img {
+    height: 90px; 
+}
+
+.your-choice-section .media-btn .tw_icon img {
+    height: 80px; 
 }
 
 /* Container for the cards */
@@ -419,6 +443,7 @@ input:checked + .slider:before {
 .youtube_card,
 .twitter_card {
     width: 500px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;

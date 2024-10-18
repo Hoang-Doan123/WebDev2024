@@ -20,9 +20,11 @@
 
         <h1>Settings</h1>
 
-        <button class="icon-button" id="choicesButton" height="20px">
-            choices
-        </button>
+        <div class="icon-button">
+            <button id="monthsButton">
+                <p>Months</p>
+            </button>
+        </div>
     </div>
 
     <div class="setting-box">
@@ -59,7 +61,7 @@
         <div class="settings-container">
             <p class="setting-heading">Main Settings</p>
             <div class="profile-section">
-                <img src="Public/Images/Cuong's_img.png" alt="Profile" class="profile-img">
+                <img src="Public/Images/Media/johncena.png" alt="Profile" class="profile-img">
                 <div class="profile-info">
                     <div class="profile-sector profile-name">
                         <p class="profile-name-tag">Name:</p>
@@ -130,25 +132,32 @@
                     <img src="Public/Images/Media/LikeIcon.png">
                 </button>
             </div>
-            <p>Button Settings</p>
         </div>
 
         <div class="change-and-choose-dashboard">
             <div class="change-dashboard-section">
                 <p>Change Dashboard</p>
                 <div class="media-btn">
-                    <img src="Public/Images/zalo_icon.png" class="zalo_icon">
-                    <img src="Public/Images/whatsapp_icon.png" class="whats_icon">
-                    <img src="Public/Images/tiktok_icon.png" class="tiktok_icon">
+                    <img src="Public/Images/zalo_icon.png" class="zalo_icon" onclick="showYourChoice()">
+                    <img src="Public/Images/whatsapp_icon.png" class="whats_icon" onclick="showYourChoice()">
+                    <img src="Public/Images/tiktok_icon.png" class="tiktok_icon" onclick="showYourChoice()">
                 </div>
             </div>
-            <div class="your-choice-section">
+            <div class="your-choice-section" style="display: none;">
                 <p>Which one do you choose?</p>
                 <div class="media-btn">
-                    <img src="Public/Images/facebook/facebook_icon.png" class="fb_icon">
-                    <img src="Public/Images/instagram/instagram_icon.png" class="ins_icon">
-                    <img src="Public/Images/youtube/youtube_icon.png" class="ytb_icon">
-                    <img src="Public/Images/twitter/twitter_icon1.png" class="tw_icon">
+                    <div class="fb_icon">
+                        <img src="Public/Images/facebook/facebook_icon.png">
+                    </div>
+                    <div class="ins_icon">
+                        <img src="Public/Images/instagram/instagram_icon.png">
+                    </div>
+                    <div class="ytb_icon">
+                        <img src="Public/Images/youtube/youtube_icon.png">
+                    </div>
+                    <div class="tw_icon">
+                        <img src="Public/Images/twitter/twitter_icon1.png">
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,18 +166,18 @@
     <div class="cards_container">
         <div class="first_row">
             <button class="facebook_card">
-                <img src="Public/Images/facebook/facebook_icon.png" height="150px">
+                <img src="Public/Images/facebook/facebook_icon.png" height="200px">
             </button>
             <button class="instagram_card">
-                <img class="instagram_img" src="Public/Images/instagram/instagram_icon.png" height="150px">
+                <img src="Public/Images/instagram/instagram_icon.png" height="150px">
             </button>
         </div>
         <div class="second_row">
             <button class="youtube_card">
-                <img src="Public/Images/youtube/youtube_icon.png" height="150px">
+                <img src="Public/Images/youtube/youtube_icon.png" height="140px">
             </button>
             <button class="twitter_card">
-                <img src="Public/Images/twitter/twitter_icon1.png" height="150px">
+                <img src="Public/Images/twitter/twitter_icon1.png" height="120px">
             </button>
         </div>
     </div>
