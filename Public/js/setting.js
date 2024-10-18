@@ -2,10 +2,9 @@ const lightBackground = "../videos/dark_tech.mp4"
 const darkBackground = "../videos/white_tech.mp4"
 const backgroundVideo = document.getElementById("backgroundVideo")
 
-// const homeBtn = document.querySelector(".home-btn")
-// homeBtn.addEventListener("click", () => {
-//     window.location.href = "main_interface.html"
-// })
+document.querySelector('.home_btn').addEventListener('click', function() {
+    window.location.href = 'main_interface.html';
+});
 
 const theme = localStorage.getItem("theme")
 if (theme) {

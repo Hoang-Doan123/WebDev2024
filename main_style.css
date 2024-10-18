@@ -80,14 +80,6 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Container for the cards */
-.cards_container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    margin-top: 20px;
-}
-
 /* General format for the cards */
 button {
     border: 1px solid #cccccc;
@@ -191,6 +183,7 @@ input:checked + .slider:before {
         0 0 22px #b32fb8;  
 }
 
+/* Container for the cards */
 .cards_container {
     display: flex;
     flex-direction: column;
