@@ -10,7 +10,7 @@ body, html {
 :root {
     --image-filter-value: brightness(0) invert(1);
     --heading-background: linear-gradient(to right, #2825ec, #6838ec);
-    --home-btn-background: linear-gradient(to right, #e925b8, #1605ad);
+    --home-btn-background: linear-gradient(to right, #000000, #1605ad);
     --home-btn-background-hover: linear-gradient(to right, #cfcfff, #fa2ec4);
 }
 
