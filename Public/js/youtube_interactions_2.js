@@ -43,21 +43,3 @@ window.onload = () => {
         smallData.textContent = `${Math.round(dataSets[index].smallBar * 1000) / 10}%`
     })
 }
-
-const colorTheme = localStorage.getItem("theme");
-
-if (colorTheme === "dark-mode") {
-    document.body.classList.add("dark-mode");
-} else if (colorTheme === "light-mode") {
-    document.body.classList.remove("dark-mode");
-}
-
-document.getElementById("theme-toggle").addEventListener("click", () => {
-    if (document.body.classList.contains("dark-mode")) {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light-mode");
-    } else {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark-mode");
-    }
-});
