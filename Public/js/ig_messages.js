@@ -8,7 +8,7 @@ const ctx = lineChart.getContext("2d")
 
 const dlc = new DrawLineChart(
     ctx,
-    ["$"],
+    [""],
     [15],
     [START_X - 25],
     ['rgb(33, 102, 51)'],

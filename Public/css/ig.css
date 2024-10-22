@@ -9,7 +9,6 @@ body {
     min-width: 450px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--main-background);
-    color: var(--title-color);
 }
 
 :root {
@@ -22,15 +21,13 @@ body {
     --pillar-gap: 16px;
     --main-background: #ffffff; 
     --title-color: #000000; 
+    --image-filter: brightness(0) invert(0);
 }
 
 .dark-mode {
     --main-background: #000000; 
     --title-color: #ffffff; 
-}
-
-.dark-mode img {
-    filter: invert(1); 
+    --image-filter: brightness(0) invert(1);
 }
 
 .navigation-bar-container {
@@ -47,14 +44,18 @@ body {
     cursor: pointer;
 }
 
-.fb-logo-container {
+.ig-logo-container {
     max-width: 50px;
     max-height: 50px;
 }
 
-.back-arrow-button img, .setting_button_container img, .fb-logo-container img {
+.back-arrow-button img, .setting_button_container img, .ig-logo-container img {
     width: 100%;
     height: 100%;
+}
+
+.back-arrow-button img, .setting_button_container img {
+    filter: var(--image-filter);
 }
 
 .icon-container {
@@ -67,7 +68,7 @@ body {
     height: 100%;
 }
 
-.facebook-analysis-container {
+.ig-analysis-container {
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -87,6 +88,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-bottom: 6px;
+    color: var(--title-color);
 }
 
 .interaction-analytics-body {
@@ -111,10 +113,19 @@ body {
 
 .box-header .icon-container {
     margin-right: 10px;
+    max-width: 20px;
+    max-height: 20px;
+    filter: var(--image-filter);
+}
+
+.box-header .icon-container img {
+    width: 100%;
+    height: 100%;
 }
 
 .box-header .title {
     cursor: pointer;
+    color: var(--title-color);
 }
 
 .box-header .title:hover {
@@ -134,11 +145,17 @@ body {
     max-height: 40px;
     align-items: center;
     justify-content: center;
+    color: var(--title-color);
+}
+
+.box-body .number {
+    color: var(--title-color);
 }
 
 .box-body .change .increase-icon, .box-body .change .decrease-icon {
     width: 45%;
     height: 45%;
+    filter: var(--image-filter);
 }
 
 .box-body .change .increase-icon {
@@ -189,6 +206,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--title-color);
 }
 
 .circle-chart-container {
@@ -224,7 +242,7 @@ body {
 .circle-inner {
     width: 80px;
     height: 80px;
-    background-color: white;
+    background-color: var(--main-background);
     z-index: 1;
 }
 
@@ -287,6 +305,7 @@ body {
 
 .color-description {
     padding: 0 6px;
+    color: var(--title-color);
 }
 
 .line-analysis-container {
@@ -306,6 +325,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: var(--title-color);
 }
 
 .line-analysis-header:hover {
@@ -351,6 +371,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px 15px;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.pillar-analysis-header:hover {
+    text-decoration: underline;
 }
 
 .pillar-chart-container {
@@ -364,7 +390,7 @@ body {
 
 .pillar-chart-container .vertical-line {
     position: absolute;
-    background-color: black;
+    background-color: var(--title-color);
     width: 2px;
     height: calc(100% - 48px);
     left: var(--line-padding);
@@ -381,62 +407,22 @@ body {
 
 .pillar-chart-container .line-value {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: 0
 }
 
 .pillar-chart-container .unit {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: 25px;
     top: 15px;
-}
-
-.line-1 {
-    top: 25px;
-}
-
-.line-2 {
-    top: 75px;
-}
-
-.line-3 {
-    top: 125px;
-}
-
-.line-4 {
-    top: 175px;
-}
-
-.line-5 {
-    top: 225px;
-}
-
-.line-6 {
-    top: 275px;
-}
-
-.value-1 {
-    top: 67px;
-}
-
-.value-2 {
-    top: 117px;
-}
-
-.value-3 {
-    top: 167px;
-}
-
-.value-4 {
-    top: 217px;
 }
 
 .pillar-chart-container .pillar {
     width: var(--pillar-width);
     height: 0;
     background-color: #72ec01;
-    color: black;
+    color: var(--main-background);
     text-align: center;
     margin-top: auto;
     transition: 0.9s;
@@ -450,58 +436,10 @@ body {
     visibility: visible;
 }
 
-.pillar.pillar-1.active {
-    height: calc(250px * 0.4000);
-}
-
-.pillar.pillar-2.active {
-    height: calc(250px * 1.2000);
-}
-
-.pillar.pillar-3.active {
-    height: calc(250px * 0.4238);
-}
-
-.pillar.pillar-4.active {
-    height: calc(250px * 0.8000);
-}
-
-.pillar.pillar-5.active {
-    height: calc(250px * 0.2000);
-}
-
-.pillar.pillar-6.active {
-    height: calc(250px * 0.7348);
-}
-
-
 .pillar-chart-container .text {
     position: absolute;
     bottom: 0px;
-}
-
-.pillar-chart-container .text-1 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 0);
-}
-
-.pillar-chart-container .text-2 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 1);
-}
-
-.pillar-chart-container .text-3 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 2);
-}
-
-.pillar-chart-container .text-4 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 3);
-}
-
-.pillar-chart-container .text-5 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 4);
-}
-
-.pillar-chart-container .text-6 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 5);
+    color: var(--title-color);
 }
 
 @keyframes upAppear {
@@ -529,7 +467,7 @@ body {
 }
 
 @media (max-width: 900px) {
-    .fb-analysis-container {
+    .ig-analysis-container {
         display: block;
     }
 

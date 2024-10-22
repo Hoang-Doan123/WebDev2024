@@ -9,7 +9,6 @@ body {
     min-width: 450px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--main-background);
-    color: var(--title-color);
 }
 
 :root {
@@ -24,15 +23,13 @@ body {
     --inner-circle-diameter: 130px;
     --main-background: #ffffff; 
     --title-color: #000000; 
+    --image-filter: brightness(0) invert(0);
 }
 
 .dark-mode {
     --main-background: #000000; 
     --title-color: #ffffff; 
-}
-
-.dark-mode img {
-    filter: invert(1);
+    --image-filter: brightness(0) invert(1);
 }
 
 .navigation-bar-container {
@@ -61,6 +58,10 @@ body {
     height: 100%;
 }
 
+.back-arrow-button img, .setting_button_container img {
+    filter: var(--image-filter);
+}
+
 .line-analysis-chart {
     display: grid;
     grid-template-columns: auto auto;
@@ -76,6 +77,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--title-color);
 }
 
 .line-analysis-side {
@@ -91,7 +93,8 @@ body {
     border: 1px solid var(--main-border-color);
     border-radius: var(--main-border-raidus);
     padding: 1rem;
-    background: white;
+    background: var(--main-background);
+    color: var(--title-color);
     box-shadow: 2px 4px 10px var(--main-box-shadow-color);
     position: relative;
     animation: upAppear 0.75s ease-in-out;
@@ -136,7 +139,8 @@ body {
 .circle-inner {
     width: var(--inner-circle-diameter);
     height: var(--inner-circle-diameter);
-    background-color: white;
+    background-color: var(--main-background);
+    color: var(--title-color);
     z-index: 1;
 }
 
@@ -174,6 +178,10 @@ body {
     gap: 10px;
     align-items: center;
     justify-items: flex-start;
+}
+
+.color-description h3 {
+    color: var(--title-color)
 }
 
 @keyframes rotateAppear {
