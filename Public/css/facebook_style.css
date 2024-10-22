@@ -9,7 +9,6 @@ body {
     min-width: 450px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--main-background);
-    color: var(--title-color);
 }
 
 :root {
@@ -20,25 +19,15 @@ body {
     --line-padding: 40px;
     --pillar-width: 50px;
     --pillar-gap: 16px;
-    --pillar-general: 50;
-    --pillar-1: 10;
-    --pillar-2: 15;
-    --pillar-3: 27;
-    --pillar-4: 40;
-    --pillar-5: 11;
-    --pillar-6: 6;
-    --pillar-7: 14;
     --main-background: #ffffff; 
     --title-color: #000000; 
+    --image-filter: brightness(0) invert(0);
 }
 
 .dark-mode {
     --main-background: #000000; 
     --title-color: #ffffff; 
-}
-
-.dark-mode img {
-    filter: invert(1); 
+    --image-filter: brightness(0) invert(1);
 }
 
 .navigation-bar-container {
@@ -65,14 +54,8 @@ body {
     height: 100%;
 }
 
-.icon-container {
-    max-width: 20px;
-    max-height: 20px;
-}
-
-.icon-container img {
-    width: 100%;
-    height: 100%;
+.back-arrow-button img, .setting_button_container img {
+    filter: var(--image-filter);
 }
 
 .facebook-analysis-container {
@@ -95,6 +78,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-bottom: 6px;
+    color: var(--title-color);
 }
 
 .interaction-analytics-body {
@@ -119,10 +103,19 @@ body {
 
 .box-header .icon-container {
     margin-right: 10px;
+    max-width: 20px;
+    max-height: 20px;
+    filter: var(--image-filter);
+}
+
+.box-header .icon-container img {
+    width: 100%;
+    height: 100%;
 }
 
 .box-header .title {
     cursor: pointer;
+    color: var(--title-color);
 }
 
 .box-header .title:hover {
@@ -142,26 +135,24 @@ body {
     max-height: 40px;
     align-items: center;
     justify-content: center;
+    color: var(--title-color);
+}
+
+.box-body .number {
+    color: var(--title-color);
 }
 
 .box-body .change .increase-icon, .box-body .change .decrease-icon {
     width: 45%;
     height: 45%;
+    filter: var(--image-filter);
 }
 
-.box-body .change .increase-icon {
-    color: greenyellow;
-}
-
-.box-body .change .decrease-icon {
-    color: red;
-}
-
-.likes-container {
+.reacts-container {
     animation: upAppear 1.1s ease-in-out;
 }
 
-.reposts-container {
+.shares-container {
     animation: upAppear 1.3s ease-in-out;
 }
 
@@ -173,11 +164,11 @@ body {
     animation: upAppear 1.7s ease-in-out;
 }
 
-.new-followers-container {
+.followers-container {
     animation: upAppear 1.9s ease-in-out;
 }
 
-.revenue-container {
+.messages-container {
     animation: upAppear 2.1s ease-in-out;
 }
 
@@ -197,6 +188,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--title-color);
 }
 
 .circle-chart-container {
@@ -232,7 +224,7 @@ body {
 .circle-inner {
     width: 80px;
     height: 80px;
-    background-color: white;
+    background-color: var(--main-background);
     z-index: 1;
 }
 
@@ -277,6 +269,11 @@ body {
     border-radius: var(--circular-border-raidus);
 }
 
+.color-description {
+    padding: 0 6px;
+    color: var(--title-color);
+}
+
 .lime {
     background-color: lime;
 }
@@ -291,10 +288,6 @@ body {
 
 .cyan {
     background-color: cyan;
-}
-
-.color-description {
-    padding: 0 6px;
 }
 
 .line-analysis-container {
@@ -314,6 +307,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: var(--title-color);
 }
 
 .line-analysis-header:hover {
@@ -359,6 +353,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px 15px;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.pillar-analysis-header:hover {
+    text-decoration: underline;
 }
 
 .pillar-chart-container {
@@ -372,7 +372,7 @@ body {
 
 .pillar-chart-container .vertical-line {
     position: absolute;
-    background-color: black;
+    background-color: var(--title-color);
     width: 2px;
     height: calc(100% - 48px);
     left: var(--line-padding);
@@ -389,68 +389,23 @@ body {
 
 .pillar-chart-container .line-value {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: 0
 }
 
 .pillar-chart-container .unit {
     position: absolute;
-    color: black;
+    color: var(--title-color);
     left: 25px;
     top: 15px;
-}
-
-.line-1 {
-    top: 25px;
-}
-
-.line-2 {
-    top: 75px;
-}
-
-.line-3 {
-    top: 125px;
-}
-
-.line-4 {
-    top: 175px;
-}
-
-.line-5 {
-    top: 225px;
-}
-
-.line-6 {
-    top: 275px;
-}
-
-.line-7 {
-    top: 325px;
-}
-
-.value-1 {
-    top: 67px;
-}
-
-.value-2 {
-    top: 117px;
-}
-
-.value-3 {
-    top: 167px;
-}
-
-.value-4 {
-    top: 217px;
 }
 
 .pillar-chart-container .pillar {
     width: var(--pillar-width);
     height: 0;
     background-color: #3498db;
-    color: black;
+    color: var(--main-background);
     text-align: center;
-    margin-top: auto;
     transition: 0.9s;
     z-index: 1;
     border: 1px solid rgb(13, 13, 13);
@@ -462,64 +417,10 @@ body {
     visibility: visible;
 }
 
-.pillar.pillar-1.active {
-    height: calc(250px * var(--pillar-1) / var(--pillar-general));
-}
-
-.pillar.pillar-2.active {
-    height: calc(250px * var(--pillar-2) / var(--pillar-general));
-}
-
-.pillar.pillar-3.active {
-    height: calc(250px * var(--pillar-3) / var(--pillar-general));
-}
-
-.pillar.pillar-4.active {
-    height: calc(250px * var(--pillar-4) / var(--pillar-general));
-}
-
-.pillar.pillar-5.active {
-    height: calc(250px * var(--pillar-5) / var(--pillar-general));
-}
-
-.pillar.pillar-6.active {
-    height: calc(250px * var(--pillar-6) / var(--pillar-general));
-}
-
-.pillar.pillar-7.active {
-    height: calc(250px * var(--pillar-7) / var(--pillar-general));
-}
-
 .pillar-chart-container .text {
     position: absolute;
     bottom: 0px;
-}
-
-.pillar-chart-container .text-1 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 0);
-}
-
-.pillar-chart-container .text-2 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 1);
-}
-
-.pillar-chart-container .text-3 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 2);
-}
-
-.pillar-chart-container .text-4 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 3);
-}
-
-.pillar-chart-container .text-5 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 4);
-}
-
-.pillar-chart-container .text-6 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 5);
-}
-.pillar-chart-container .text-7 {
-    left: calc(var(--line-padding) + 20px + (var(--pillar-gap) + var(--pillar-width)) * 6);
+    color: var(--title-color);
 }
 
 @keyframes upAppear {
