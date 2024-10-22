@@ -268,6 +268,7 @@ body {
 }
 
 .color-description {
+    padding: 0 6px;
     color: var(--title-color);
 }
 
@@ -285,10 +286,6 @@ body {
 
 .cyan {
     background-color: cyan;
-}
-
-.color-description {
-    padding: 0 6px;
 }
 
 .line-analysis-container {
