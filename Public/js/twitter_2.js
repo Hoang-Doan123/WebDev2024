@@ -3,6 +3,7 @@ import DrawLineChart, {
     LINE_CHART_WIDTH,
     START_X
 } from "./index.js"
+import DrawCircleChart from "./DrawCircleChart.js";
 
 const canvas = document.getElementById("line-chart")
 
@@ -22,3 +23,22 @@ const dlc = new DrawLineChart(
 )
 
 dlc.draw();
+
+const circleChartContainer = document.querySelector(".circle-chart-container-test")
+
+const dcc = new DrawCircleChart(
+    circleChartContainer,
+    [
+        ["circle", "chart-1"],
+        ["circle-inner"]
+    ],
+    150, 80,
+    ["lime", "green", "blue", "cyan"],
+    [25, 30, 25, 20],
+    "Total: 999", 
+    ["circle-chart-footer"],
+    "August", 
+    ""
+)
+
+dcc.build()

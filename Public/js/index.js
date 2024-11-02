@@ -8,10 +8,16 @@ function randomNumberArray(length, min, max) {
     return randomArray;
 }
 
+function writeStyle(element, elementProperties) {
+
+}
+
 const LINE_CHART_HEIGHT = 200
 const LINE_CHART_WIDTH = 400
 const START_X = 50
 const TEXT_EXTRA_SPACE = 11
+
+
 
 /**
  * A class defined to draw line chart
@@ -22,6 +28,7 @@ const TEXT_EXTRA_SPACE = 11
  * @params {Array<string>} lineStrokeStyles: define the style of the line
  * @params {Array<string>} labels: the labels below the chart
  * @params {string} letters: the number sometimes can be too long, so the letters represent the number usual units (like K (thousand), M (million), etc.).
+ * @params {String} theme: get the theme based on how the settings is set.
  * @params {Array<Array<number>>} dataPoints: the points where the line goes.
 */
 class DrawLineChart {
@@ -90,12 +97,12 @@ class DrawLineChart {
         }
 
         for (let i = 0; i < this.units.length; i++) {
-            this.setUnitValue(this.unitsStartPoints[i], this.cycles[i], this.letters)
-            this.fillUnits(this.units[i], this.unitsStartPoints[i])
+            this.#setUnitValue(this.unitsStartPoints[i], this.cycles[i], this.letters)
+            this.#fillUnits(this.units[i], this.unitsStartPoints[i])
         }
 
         for (let i = 0; i < this.dataPoints.length; i++) {
-            this.lineDraw(this.dataPoints[i], this.lineStrokeStyles[i])
+            this.#lineDraw(this.dataPoints[i], this.lineStrokeStyles[i])
         }
 
         for (let j = 0; j < this.labels.length; j++) {
@@ -127,7 +134,7 @@ class DrawLineChart {
         this.ctx.stroke();
     }
 
-    setUnitValue(startPoint, cycle, letters) {
+    #setUnitValue(startPoint, cycle, letters) {
         let count = 1
         for (let b=163; b > 20; b-=40) {
             this.ctx.font = "12px Arial"
@@ -139,11 +146,11 @@ class DrawLineChart {
         }
     }
 
-    fillUnits(unit, startPoint) {
+    #fillUnits(unit, startPoint) {
         this.ctx.fillText(unit, startPoint, 10)
     }
 
-    lineDraw(dataPoints, lineStrokeStyle) {
+    #lineDraw(dataPoints, lineStrokeStyle) {
         this.ctx.beginPath();
         this.ctx.moveTo(this.START_X, this.LINE_CHART_HEIGHT - dataPoints[0]);
 
