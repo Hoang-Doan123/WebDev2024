@@ -28,21 +28,32 @@ twitterCard.addEventListener('click', () => {
     window.location.href = "./twitter.html"
 })
 
+document.getElementById('settingButton').addEventListener('click', function() {
+    window.location.href = 'mainsetting.html';
+});
+
 const toggleSwitch = document.getElementById('backgroundToggle');
 const backgroundVideo = document.getElementById('backgroundVideo');
 const body = document.body;
 const heading_container = document.querySelector('.heading_container');
 
-
 // Store the original and new video sources
 const originalVideoSrc = 'videos/dark.mp4';
 const newVideoSrc = 'videos/white.mp4'; // Change this to your new video
 
-const curTheme = localStorage.getItem("theme")
-if (curTheme === "dark-mode") {
-    body.classList.add("dark-mode")
-    toggleSwitch.checked = true;
-    backgroundVideo.src = newVideoSrc;
+const getTheme = localStorage.getItem("theme");
+if (getTheme) {
+    if (getTheme === "dark-mode") {
+        body.classList.add("dark-mode")
+        toggleSwitch.checked = true;
+        backgroundVideo.src = newVideoSrc;
+    } else if (getTheme === "light-mode") {
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode")
+        }
+        toggleSwitch.checked = false;
+        backgroundVideo.src = originalVideoSrc;
+    }
 }
 
 toggleSwitch.addEventListener('change', function() {

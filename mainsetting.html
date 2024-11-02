@@ -20,14 +20,16 @@
 
         <h1>Settings</h1>
 
-        <button class="icon-button" id="choicesButton" height="20px">
-            choices
-        </button>
+        <div class="icon-button">
+            <button id="monthsButton">
+                <p>Months</p>
+            </button>
+        </div>
     </div>
 
     <div class="setting-box">
         <div class="mode-setting-box">
-            <h3>Mode Settings</h3>
+            <p class="mode-setting-heading">Mode Settings</p>
             <div class="section">
                 <h4>Font Level</h4>
                 <div class="font-change">
@@ -59,94 +61,104 @@
         <div class="settings-container">
             <p class="setting-heading">Main Settings</p>
             <div class="profile-section">
-                <img src="Public/Images/Cuong's_img.png" alt="Profile" class="profile-img">
+                <img src="Public/Images/Media/johncena.png" alt="Profile" class="profile-img">
                 <div class="profile-info">
                     <div class="profile-sector profile-name">
                         <p class="profile-name-tag">Name:</p>
-                        <p class="profile-name-value">I don't know</p>
+                        <input type="text" class="profile-name-input" placeholder="Enter your name">
                     </div>
                     <div class="profile-sector profile-email">
                         <p class="profile-email-tag">Email:</p>
-                        <p class="profile-email-value">I don't know</p>
+                        <input type="email" class="profile-email-input" placeholder="Enter your email">
                     </div>
                     <div class="profile-sector profile-phone">
                         <p class="profile-phone-tag">Phone:</p>
-                        <p class="profile-phone-value">00000000</p>
+                        <input type="tel" class="profile-phone-input" placeholder="Enter your phone number">
                     </div>
                     <div class="profile-sector profile-address">
                         <p class="profile-address-tag">Address:</p>
-                        <p class="profile-address-value">I don't know</p>
+                        <input type="text" class="profile-address-input" placeholder="Enter your address">
                     </div>
-                    <a href="#" class="logout-btn">Log out</a>
                 </div>
             </div>      
             <div class="buttons">
                 <div class="camera">
-                    <button class="camera-btn">Camera</button>
-                    <p class="camera-btn-description">Change avatar image</p>
+                    <button class="buttons-btn">
+                        <img src="Public/Images/Media/camera.png">
+                    </button>
+                    <p class="camera-btn-description">Change avatar</p>
                 </div>
                 <div class="premium">
-                    <button class="premium-btn">Premium</button>
-                    <p class="premium-btn-description">Pay 2$ a month</p>
-                </div>
-                <div class="connect">
-                    <button class="connect-btn">Connect</button>
+                    <button class="buttons-btn">
+                        <img src="Public/Images/Media/RevenueIcon.png">
+                    </button>
+                    <p class="premium-btn-description">Pay fee</p>
                 </div>
             </div>
+            <a href="#" class="logout-btn">Log out</a>
         </div>
 
         <div class="button_settings">
             <div class="first_row">
                 <button class="like_card">
-                    <img src="Public/Images/facebook/like.png" height="100px">
+                    <img src="Public/Images/facebook/like.png">
                 </button>
                 <button class="share_card">
-                    <img src="Public/Images/facebook/share.png" height="80px">
+                    <img src="Public/Images/facebook/share.png">
                 </button>
                 <button class="comment_card">
-                    <img src="Public/Images/Media/commentIcon.png" height="100px">
+                    <img src="Public/Images/Media/commentIcon.png">
                 </button>
             </div>
             <div class="second_row">
                 <button class="subscribe_card">
-                    <img src="Public/Images/youtube/subscribe.png" height="100px">
+                    <img src="Public/Images/youtube/subscribe.png">
                 </button>
                 <button class="revenue_card">
-                    <img src="Public/Images/Media/RevenueIcon.png" height="100px">
+                    <img src="Public/Images/Media/RevenueIcon.png">
                 </button>
                 <button class="follower_card">
-                    <img src="Public/Images/Media/NewFollowers.png" height="100px">
+                    <img src="Public/Images/Media/NewFollowers.png">
                 </button>
             </div>
             <div class="third_row">
                 <button class="pagelike_card">
-                    <img src="Public/Images/facebook/page.png" height="100px">
+                    <img src="Public/Images/facebook/page.png">
                 </button>
                 <button class="message_card">
-                    <img src="Public/Images/instagram/messig.png" height="100px">
+                    <img src="Public/Images/facebook/messenger.png">
                 </button>
                 <button class="react_card">
-                    <img src="Public/Images/Media/LikeIcon.png" height="100px">
+                    <img src="Public/Images/Media/LikeIcon.png">
                 </button>
             </div>
-            <p>Button Settings</p>
         </div>
 
-        <div class="change-dashboard-section">
-            <p>Change Dashboard</p>
-            <div class="media-btn">
-                <img src="Public/Images/zalo_icon.png" class="zalo_icon">
-                <img src="Public/Images/whatsapp_icon.png" class="whats_icon">
-                <img src="Public/Images/tiktok_icon.png" class="tiktok_icon">
+        <div class="change-and-choose-dashboard">
+            <div class="change-dashboard-section">
+                <p>Change Dashboard</p>
+                <div class="media-btn">
+                    <img src="Public/Images/zalo_icon.png" class="zalo_icon" onclick="showYourChoice()">
+                    <img src="Public/Images/whatsapp_icon.png" class="whats_icon" onclick="showYourChoice()">
+                    <img src="Public/Images/tiktok_icon.png" class="tiktok_icon" onclick="showYourChoice()">
+                </div>
             </div>
-        </div>
-        <div class="your-choice-section">
-            <p>Which one do you choose?</p>
-            <div class="media-btn">
-                <img src="Public/Images/facebook/facebook_icon.png" class="fb_icon">
-                <img src="Public/Images/instagram/instagram_icon.png" class="ins_icon">
-                <img src="Public/Images/youtube/youtube_icon.png" class="ytb_icon">
-                <img src="Public/Images/twitter/twitter_icon1.png" class="tw_icon">
+            <div class="your-choice-section" style="display: none;">
+                <p>Which one do you choose?</p>
+                <div class="media-btn">
+                    <div class="fb_icon">
+                        <img src="Public/Images/facebook/facebook_icon.png">
+                    </div>
+                    <div class="ins_icon">
+                        <img src="Public/Images/instagram/instagram_icon.png">
+                    </div>
+                    <div class="ytb_icon">
+                        <img src="Public/Images/youtube/youtube_icon.png">
+                    </div>
+                    <div class="tw_icon">
+                        <img src="Public/Images/twitter/twitter_icon1.png">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -154,24 +166,20 @@
     <div class="cards_container">
         <div class="first_row">
             <button class="facebook_card">
-                <img src="Public/Images/facebook/facebook_icon.png" height="150px">
+                <img src="Public/Images/facebook/facebook_icon.png" height="200px">
             </button>
             <button class="instagram_card">
-                <img class="instagram_img" src="Public/Images/instagram/instagram_icon.png" height="150px">
+                <img src="Public/Images/instagram/instagram_icon.png" height="150px">
             </button>
         </div>
         <div class="second_row">
             <button class="youtube_card">
-                <img src="Public/Images/youtube/youtube_icon.png" height="150px">
+                <img src="Public/Images/youtube/youtube_icon.png" height="140px">
             </button>
             <button class="twitter_card">
-                <img src="Public/Images/twitter/twitter_icon1.png" height="150px">
+                <img src="Public/Images/twitter/twitter_icon1.png" height="120px">
             </button>
         </div>
     </div>
-    <script>
-        console.log("Test")
-    </script>
 </body>
-
 </html>

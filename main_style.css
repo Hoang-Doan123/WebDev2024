@@ -6,6 +6,7 @@ body, html {
     overflow: auto; /* Enable scrolling */
     transition: background-color 0.4s; /* Smooth background transition */
 }
+
 :root {
     --image-filter-value: brightness(0) invert(1);
     --heading-background: linear-gradient(to right, #2825ec, #6838ec);
@@ -50,6 +51,7 @@ body, html {
     background: var(--home-btn-background); 
     padding: 10px; /* Set padding for the button */
     border-radius: 10px; 
+    border: 2px solid black;
     margin: 0 10px; 
     transition: background 0.33s; 
 }
@@ -71,13 +73,17 @@ body, html {
 /* Main title of dashboard */
 .dashboard_title {
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bold;
-    color: #030202;
-    margin-top: 60px;
-    letter-spacing: 1px;
-    cursor: context-menu;
-    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: relative;
+    z-index: 1; /* Keep content on top of video */
+    text-shadow: 
+        0 0 2px #c612cc,  
+        0 0 7px #b32fb8,
+        0 0 12px #b32fb8,
+        0 0 18px #b32fb8,
+        0 0 22px #b32fb8;  
 }
 
 /* General format for the cards */
@@ -108,9 +114,6 @@ button:hover {
     background-color: #fff;
     text-align: center;
 }
-
-/* Add the new styles here */
-
 
 .background-video {
     position: fixed;
@@ -168,21 +171,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-.dashboard_title {
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    z-index: 1; /* Keep content on top of video */
-    text-shadow: 
-        0 0 2px #c612cc,  
-        0 0 7px #b32fb8,
-        0 0 12px #b32fb8,
-        0 0 18px #b32fb8,
-        0 0 22px #b32fb8;  
-}
-
 /* Container for the cards */
 .cards_container {
     display: flex;
@@ -204,6 +192,7 @@ button {
     border: none;
     cursor: pointer;
     transition: filter 0.1s; /* Smooth transition for color change */
+    border: 2px solid black;
 }
 
 button img {
@@ -222,4 +211,36 @@ body.dark-mode {
 body.dark-mode .dashboard_title {
     filter: brightness(0) invert(0);
     text-shadow: none; /* Change all gadgets to black */
+}
+
+.footing_credit {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 
+        0 0 2px #c612cc,  
+        0 0 7px #b32fb8,
+        0 0 12px #b32fb8,
+        0 0 18px #b32fb8,
+        0 0 22px #b32fb8;
+}
+
+.footing_container {
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 
+        0 0 2px #c612cc,  
+        0 0 7px #b32fb8,
+        0 0 12px #b32fb8,
+        0 0 18px #b32fb8,
+        0 0 22px #b32fb8;
+}
+
+body.dark-mode .footing_credit,
+body.dark-mode .footing_container {
+    color: black; 
+    text-shadow: none;
 }
