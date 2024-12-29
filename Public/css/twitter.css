@@ -435,11 +435,11 @@ body {
         opacity: 0;
         transform: rotate(0deg) scale(0.5);
       }
-      50% {
+    50% {
         opacity: 1;
         transform: rotate(180deg) scale(1);
       }
-      100% {
+    100% {
         opacity: 1;
         transform: rotate(360deg) scale(1);
       }
